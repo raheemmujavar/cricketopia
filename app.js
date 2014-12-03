@@ -13,7 +13,7 @@ var async = require('async');
 //initialize our application
 var app = express();
 app.use(express.static(path.join(__dirname, 'assets')));
-var server = http.createServer(app).listen(3000);
+var server = http.createServer(app).listen(3001);
 var io = socketIO.listen(server);
 
 var sub = _redis.createClient();
@@ -32,21 +32,68 @@ app.get('/chat' , function(request, response){
   response.sendfile(__dirname + settings.view_directory + '/chat.html')
 });
 
-var MatchSchedule = '', FBID = '', FBNAME = '';
+var MatchSchedule = [], FBID = '', FBNAME = '', teaminfo = [], playerinfo = [];
+
+// var fb ;
+//  fb  = fb.split("\n").join("");
+// console.log('fa'+fb);
 
 function getMatchSchedule(callback){
-  db.MatchSchedule.find({},{__v:0}).sort({"startDate" : 1}).exec(function(err,docs){
+  db.Match_Schedule.find({},{__v:0}).sort({"startDate" : 1}).exec(function(err,docs){
         if(err)console.log(err);
             else{
               if(docs){
-                MatchSchedule = JSON.stringify(docs);
-                callback();
+               for(var i = 0; i < docs.length; i++)  
+                  { 
+                    MatchSchedule.push(docs[i]);
+                    if(i === docs.length - 1)
+                    {
+                      callback();
+                    } 
+                  };
               }
             }
       });
   }
 
-   
+  function getTeamInfo(team1,team2,callback){
+     db.Team_Info.find({teamId:{$in:[team1,team2]}}).exec(function(err,docs){
+        if(err)console.log(err);
+            else{
+              if(docs){
+                for(var i = 0; i < docs.length; i++)  
+                  { 
+                    teaminfo.push(docs[i]);
+                    if(i === docs.length - 1)
+                    {
+                      callback();
+                    } 
+                  };
+              }
+            }
+      });
+  }
+
+  function getPlayerInfo(player,callback){
+  db.Player_Info.find({playerId : player}).exec(function(err,docs){
+        if(err)console.log(err);
+            else{
+              if(docs){
+                for(var i = 0; i < docs.length; i++)  
+                  { 
+                    playerinfo.push(docs[i]);
+                    if(i === docs.length - 1)
+                    {
+                      callback();
+                    } 
+                  };        
+                }
+            }
+      });
+  }
+
+
+
 //chat using socket.io
 io.sockets.on('connection', function(client){
 
@@ -89,10 +136,42 @@ io.sockets.on('connection', function(client){
               }
           }
       });
-     //loginwithfacebook socket ends here
-    
+     });
+    //loginwithfacebook socket ends here
+
+    client.on('getTeamInformation',function(data){
+            var team1 = data.team1Id;
+            var team2 = data.team2Id;
+            console.log('getTeamInformation called');
+             getTeamInfo(team1,team2,function(){  
+                       client.emit('getTeamInfo',teaminfo);
+                      });
+    });
+
+     client.on('getPlayerInformation',function(data){
+              console.log('getPlayerInformation called');
+               getPlayerInfo(data.playerId,function(){  
+                         client.emit('getPlayerInfo',playerinfo);
+                        });
+    });
 
 
+     client.on('setBidInformation',function(data){
+      // console.log('setBidInformation called');
+      // console.log('matchId '+data.matchId);
+      // console.log('playerId '+data.playerId);
+      // console.log('fbid '+data.FBID);
+      // console.log('bidamount '+data.bidAmount);
+                   db.Player_Bid_Info.update(
+                    {"matchId":data.matchId,"playerId":data.playerId},
+                    {$addToSet:{bidInfo:{"FBID":data.FBID,"bidAmount":data.bidAmount}}},
+                    {upsert:true}, function (err,updated){
+                  if(err) console.log(err);
+                  else {
+                          client.emit('bidsuccess',"Inserted bid information"); 
+                          console.log('Bid information is saved');
+                       }
+                     });
     });
 
 

@@ -57,7 +57,23 @@
                     "deviceToken":"1",
                     "EMAIL" : "raheem@gmail.com" 
             });
-                     //while loop ends here 
+
+        socket.emit('getTeamInformation',
+          {
+                    "team1Id" : 21,
+                    "team2Id" : 22
+
+            });
+        socket.emit('getPlayerInformation',{"playerId":58845});
+
+        socket.emit('setBidInformation',{
+                    "matchId" : "190482",
+                    "playerId" : 3618,
+                    "FBID" : "2254879252",
+                    "bidAmount" : 80
+        })
+
+       //              //while loop ends here 
       });
       //connect socket ends here
        var timest = Date.now(),name1= '',yid='',chat_id='';

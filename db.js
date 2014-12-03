@@ -2,6 +2,9 @@ var mongoose = require( 'mongoose' );
 mongoose.connect( 'mongodb://localhost/cricapp' );
 var Schema   = mongoose.Schema;
 var Schema1   = mongoose.Schema;
+var Schema2   = mongoose.Schema;
+var Schema3   = mongoose.Schema;
+var Schema4   = mongoose.Schema;
  
 var userSchema = new Schema({
         _id : String,
@@ -15,7 +18,8 @@ var userSchema = new Schema({
  var userSchemacol = "userSchema"
 exports.userSchema = mongoose.model( 'userSchema', userSchema, userSchemacol );
 
-var MatchSchedule = new Schema1({
+
+var Match_Schedule = new Schema1({
           matchId : Number, 
           mtype : String, 
           series_id : String, 
@@ -26,8 +30,49 @@ var MatchSchedule = new Schema1({
           team1 : Object, 
           team2 : Object
 });
- var MatchSchedulecol = "MatchSchedule"
-exports.MatchSchedule = mongoose.model( 'MatchSchedule', MatchSchedule, MatchSchedulecol );
+ var MatchSchedulecol = "Match_Schedule"
+exports.Match_Schedule = mongoose.model( 'Match_Shedule', Match_Schedule, MatchSchedulecol );
+
+
+var Team_Info = new Schema2({
+         teamId : Number, 
+         teamName : String, 
+         teamShortName : String, 
+         teamLogoPath : String, 
+         teamLogoSmallPath : String, 
+         teamFlagPath : String, 
+         teamSmallFlagPath : String, 
+         teamRoundFlagPath : String, 
+         teamSmallRoundFlagPath : String, 
+         teamLargeRoundFlagPath : String, 
+         players : Array
+});
+ var Team_Infocol = "Team_Info"
+exports.Team_Info = mongoose.model( 'Team_Info', Team_Info, Team_Infocol );
+
+
+var Player_Info = new Schema3({
+           playerId : Number, 
+           teamId : Number, 
+           firstName : String, 
+           lastName : String, 
+           country : String, 
+           fullname: String, 
+           batting_info : Object, 
+           bowling_info : Object 
+});
+ var Player_Infocol = "Player_Info"
+exports.Player_Info = mongoose.model( 'Player_Info', Player_Info, Player_Infocol );
+
+
+var Player_Bid_Info = new Schema4({
+         matchId: String,
+         playerId : Number,
+         bidInfo : Array
+});
+ var Player_Bid_Infocol = "Player_Bid_Info"
+exports.Player_Bid_Info = mongoose.model( 'Player_Bid_Info', Player_Bid_Info, Player_Bid_Infocol );
+
 
 
 
