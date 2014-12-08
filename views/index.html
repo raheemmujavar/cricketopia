@@ -60,17 +60,32 @@
 
         socket.emit('getTeamInformation',
           {
-                    "team1Id" : 21,
-                    "team2Id" : 22
+                    "team1Id" : "21",
+                    "team2Id" : "1188",
+                    "matchId" : "190482"
 
             });
-        socket.emit('getPlayerInformation',{"playerId":58845});
+        socket.emit('getPlayerInformation',{"playerId":10181});
+
+         socket.emit('getBidInformation',{"playerId":58845,"matchId":"190482"});
 
         socket.emit('setBidInformation',{
-                    "matchId" : "190482",
-                    "playerId" : 3618,
-                    "FBID" : "2254879252",
-                    "bidAmount" : 80
+                    "matchId" : "21",
+                    "playerId" : 58846,
+                    "FBID" : "22345678",
+                    "bidAmount" : 90
+        })
+
+      socket.emit('updateBidInformation',{
+                    "matchId" : "21",
+                    "playerId" : 58846,
+                    "FBID" : "22345678",
+                    "bidAmount" : 100
+        })
+         socket.emit('deleteBidInformation',{
+                    "matchId" : "21",
+                    "playerId" : 58846,
+                    "FBID" : "223456781545465"
         })
 
        //              //while loop ends here 

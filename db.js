@@ -5,6 +5,7 @@ var Schema1   = mongoose.Schema;
 var Schema2   = mongoose.Schema;
 var Schema3   = mongoose.Schema;
 var Schema4   = mongoose.Schema;
+var Schema5  = mongoose.Schema;
  
 var userSchema = new Schema({
         _id : String,
@@ -72,6 +73,15 @@ var Player_Bid_Info = new Schema4({
 });
  var Player_Bid_Infocol = "Player_Bid_Info"
 exports.Player_Bid_Info = mongoose.model( 'Player_Bid_Info', Player_Bid_Info, Player_Bid_Infocol );
+
+
+var Match_Players = new Schema5({
+         matchId: Number,
+         teams : Object
+         
+});
+ var Match_Playerscol = "Match_Players"
+exports.Match_Players = mongoose.model( 'Match_Players', Match_Players, Match_Playerscol );
 
 
 
