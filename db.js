@@ -14,7 +14,9 @@ var userSchema = new Schema({
         FBCITY:String,
         FBCOUNTRY:String,
         deviceToken:String,
-        EMAIL : String
+        EMAIL : String,
+        Credits : Number,
+        FriendsList : Array
 });
  var userSchemacol = "userSchema"
 exports.userSchema = mongoose.model( 'userSchema', userSchema, userSchemacol );

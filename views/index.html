@@ -67,26 +67,38 @@
             });
         socket.emit('getPlayerInformation',{"playerId":10181});
 
-         socket.emit('getBidInformation',{"playerId":58845,"matchId":"190482"});
+        socket.emit('getBidInformation',{"playerId":58845,"matchId":"190482"});
 
         socket.emit('setBidInformation',{
-                    "matchId" : "21",
-                    "playerId" : 58846,
-                    "FBID" : "22345678",
+                    "matchId" : "190482",
+                    "playerId" : 4218,
+                    "FBID" : "2234567812",
                     "bidAmount" : 90
         })
 
       socket.emit('updateBidInformation',{
-                    "matchId" : "21",
-                    "playerId" : 58846,
+                    "matchId" : "190482",
+                    "playerId" : 1188,
                     "FBID" : "22345678",
                     "bidAmount" : 100
         })
          socket.emit('deleteBidInformation',{
-                    "matchId" : "21",
+                    "matchId" : "190482",
                     "playerId" : 58846,
                     "FBID" : "223456781545465"
         })
+
+      socket.emit('InviteFriends',{
+                    "FBID" : "1505563059728249",
+                    "acceptedFBID" : "55055630597282490"
+                    
+        })
+
+        // socket.emit('AskFriendsAccept',{
+        //             "FBID" : "1505563059728249"
+                    
+                    
+        // })
 
        //              //while loop ends here 
       });
