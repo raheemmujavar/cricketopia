@@ -62,7 +62,8 @@
           {
                     "team1Id" : "21",
                     "team2Id" : "1188",
-                    "matchId" : "190482"
+                    "matchId" : "190482",
+                    "FBID" : "2234567812"
 
             });
         socket.emit('getPlayerInformation',{"playerId":10181});
@@ -71,21 +72,21 @@
 
         socket.emit('setBidInformation',{
                     "matchId" : "190482",
-                    "playerId" : 4218,
-                    "FBID" : "2234567812",
-                    "bidAmount" : 90
-        })
-
-      socket.emit('updateBidInformation',{
-                    "matchId" : "190482",
-                    "playerId" : 1188,
-                    "FBID" : "22345678",
+                    "playerId" : 4035,
+                    "FBID" : "22345678122365",
                     "bidAmount" : 100
         })
+
+      // socket.emit('updateBidInformation',{
+      //               "matchId" : "190482",
+      //               "playerId" : 4218,
+      //               "FBID" : "2234567812",
+      //               "bidAmount" : 100
+      //   })
          socket.emit('deleteBidInformation',{
                     "matchId" : "190482",
-                    "playerId" : 58846,
-                    "FBID" : "223456781545465"
+                    "playerId" : 4035,
+                    "FBID" : "2234567812"
         })
 
       socket.emit('InviteFriends',{
@@ -99,6 +100,29 @@
                     
                     
         // })
+
+     socket.emit('getUserPlayers',{
+                    "FBID" : "58487587854917",
+                    "matchId" : "190482"
+                    
+        })
+
+     socket.emit('createPrivateLeague',{ 
+      "FBID" : "1505563059728251", 
+      "leagueName" : "league2", 
+      "matchId" : "1235" 
+    })
+
+      socket.emit('joinLeague',{ 
+        "FBID" : "5505563059728250", 
+        "leagueId" : "54882284290df9a921f756c9", 
+        "matchId" : "1235" 
+      }) 
+
+      socket.emit('createPublicLeague',{ 
+        "FBID" : "1505563059728249", 
+        "matchId" : "1235" 
+      })
 
        //              //while loop ends here 
       });

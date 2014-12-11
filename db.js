@@ -6,6 +6,7 @@ var Schema2   = mongoose.Schema;
 var Schema3   = mongoose.Schema;
 var Schema4   = mongoose.Schema;
 var Schema5  = mongoose.Schema;
+var Schema6  = mongoose.Schema;
  
 var userSchema = new Schema({
         _id : String,
@@ -61,6 +62,9 @@ var Player_Info = new Schema3({
            lastName : String, 
            country : String, 
            fullname: String, 
+           image : String,
+           pic_url : String,
+           otherInfo : String,
            batting_info : Object, 
            bowling_info : Object 
 });
@@ -84,6 +88,18 @@ var Match_Players = new Schema5({
 });
  var Match_Playerscol = "Match_Players"
 exports.Match_Players = mongoose.model( 'Match_Players', Match_Players, Match_Playerscol );
+
+
+var Leagues_Info = new Schema6({
+         leagueName : String, 
+         matchId : Number, 
+         createdBy : String, 
+         users : Array
+         
+});
+ var Leagues_Infocol = "Leagues_Info"
+exports.Leagues_Info = mongoose.model( 'Leagues_Info', Leagues_Info, Leagues_Infocol );
+
 
 
 
