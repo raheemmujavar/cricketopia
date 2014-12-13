@@ -17,7 +17,8 @@ var userSchema = new Schema({
         deviceToken:String,
         EMAIL : String,
         Credits : Number,
-        FriendsList : Array
+        FriendsList : Array,
+        CreditsInfo : Array
 });
  var userSchemacol = "userSchema"
 exports.userSchema = mongoose.model( 'userSchema', userSchema, userSchemacol );
