@@ -30,8 +30,8 @@ var Match_Schedule = new Schema1({
           series_id : String, 
           series_name : String, 
           MatchNo : String, 
-          StartDate : String, 
-          EndDate : String, 
+          StartDate : Date, 
+          EndDate : Date, 
           team1 : Object, 
           team2 : Object
 });
@@ -76,7 +76,8 @@ exports.Player_Info = mongoose.model( 'Player_Info', Player_Info, Player_Infocol
 var Player_Bid_Info = new Schema4({
          matchId: String,
          playerId : Number,
-         bidInfo : Array
+         bidInfo : Array,
+         player_bids : Array
 });
  var Player_Bid_Infocol = "Player_Bid_Info"
 exports.Player_Bid_Info = mongoose.model( 'Player_Bid_Info', Player_Bid_Info, Player_Bid_Infocol );
