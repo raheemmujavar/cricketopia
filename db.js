@@ -7,6 +7,7 @@ var Schema3   = mongoose.Schema;
 var Schema4   = mongoose.Schema;
 var Schema5  = mongoose.Schema;
 var Schema6  = mongoose.Schema;
+var Schema7  = mongoose.Schema;
  
 var userSchema = new Schema({
         _id : String,
@@ -102,6 +103,15 @@ var Leagues_Info = new Schema6({
  var Leagues_Infocol = "Leagues_Info"
 exports.Leagues_Info = mongoose.model( 'Leagues_Info', Leagues_Info, Leagues_Infocol );
 
+
+var chat_Info = new Schema7({
+         message : String, 
+         FBID : String, 
+         time : Date
+         
+});
+ var chat_Infocol = "chat_Info"
+exports.chat_Info = mongoose.model( 'chat_Info', chat_Info, chat_Infocol );
 
 
 

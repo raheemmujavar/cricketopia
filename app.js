@@ -1,7 +1,7 @@
 //load local modules
 var db = require('./db');
-var redisip = '127.0.0.1';
-//var redisip = 'quizredis.qnsdtp.0001.apse1.cache.amazonaws.com';
+//var redisip = '127.0.0.1';
+var redisip = 'quizredis.qnsdtp.0001.apse1.cache.amazonaws.com';
 //require necessary modules
 var http = require('http')
   , express = require('express')
@@ -16,7 +16,7 @@ var async = require('async');
 //initialize our application
 var app = express();
 app.use(express.static(path.join(__dirname, 'assets')));
-var server = http.createServer(app).listen(3002);
+var server = http.createServer(app).listen(3001);
 var io = socketIO.listen(server);
 var stdev = require( 'compute-stdev' );
 var sub = _redis.createClient(6379,redisip);
@@ -455,33 +455,18 @@ function updateredis(matchid,playerid,amount,fbid,callback){
 
 //updateredis();
 
-function redis1(match_Id){
+function redis1(match_Id,playerId){
 
-
-      db.Match_Players.aggregate([{ $unwind : "$teams" }, {$match : {"matchId" : parseInt(match_Id) } },{ $project : {    matchid : "$matchId" , team : "$teams.teamId",  players : "$teams.players.playerId"} } ],function(err,docs){
-          if(docs.length>0){
-                var players_list = [], nn;
-                for(var i=0;i<docs[0].players.length;i++){
-                  players_list.push(docs[0].players[i])
-                }
-                for(var i=0;i<docs[1].players.length;i++){
-                  players_list.push(docs[1].players[i])
-                }
-               
-              // console.log(players_list)
-                var j=0;nn=players_list.length;
-                for(var k=0;k<players_list.length;k++){
-                     (function(k){
                       //console.log(players_list[k]);
 
-                              redis.scard("bidarray"+match_Id+"_"+players_list[k]+"",function(err,resp){
+                              redis.scard("bidarray"+match_Id+"_"+playerId+"",function(err,resp){
                               if(err){console.log(err)}
                                 else 
                                 {
                                   //console.log('redis response is '+resp+' for '+players_list[k]);
                                   if(resp>=1)
                                   {
-                                     redis.smembers("bidarray"+match_Id+"_"+players_list[k]+"",function(err,members){
+                                     redis.smembers("bidarray"+match_Id+"_"+playerId+"",function(err,members){
                                       if(err) {console.log(err)}
                                         else
                                         {
@@ -507,7 +492,7 @@ function redis1(match_Id){
                                                  // console.log//('pmem amount is '+pmem.amount+' and fbid is '+pmem.FBID);
                                                   if(pmem.amount==temp)
                                                         {
-                                                         updateredis(match_Id,players_list[k],pmem.amount,pmem.FBID,function(){
+                                                         updateredis(match_Id,playerId,pmem.amount,pmem.FBID,function(){
 
                                                          });
                                                         }
@@ -525,14 +510,10 @@ function redis1(match_Id){
                           })
 
 
-                     }(k))
-
-                }
-          }
-      })
+                    
 
 }
-redis1(190482);
+
 
 
 //console.log('random value is '+parseInt(random(50,200)).toString();
@@ -806,6 +787,7 @@ client.on('setBidInformation',function(data){
                                                       if(err) console.log(err);
                                                       else
                                                       {
+                                                     redis1(data.matchId,data.playerId);
                                                       console.log(succ);
                                                     }
                                                     }); 
@@ -883,6 +865,7 @@ client.on('setBidInformation',function(data){
                                                                                                               if(err) console.log(err);
                                                                                                               else
                                                                                                               {
+                                                                                                                redis1(data.matchId,data.playerId);
                                                                                                               console.log(succ);
                                                                                                             }
                                                                                                             }); 
@@ -1155,6 +1138,18 @@ client.on('setBidInformation',function(data){
         })
 
 
+   client.on("chat",function(data){ 
+
+    console.log('chat time stamp is '+data.FBID);
+                  new db.chat_Info({FBID : data.FBID,message : data.message,timestamp : new Date()}).save(function(err,document){
+                      if(err) throw err;
+                      else{
+                        console.log('new chat ')
+                              client.emit('success',"new chat record inserted successfully");
+                           // console.log('facebook information is saved');
+                          }
+                        });
+        })
 
 
 

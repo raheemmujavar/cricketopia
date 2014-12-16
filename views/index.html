@@ -47,52 +47,57 @@
           //google_id = 'mujavar@gmail.com';
       // room = 'xW_AsV7k42o';
          
-        // socket.emit('logInWithFacebook',
-        //   {
-        //             "FBID" : "58487587854939",
-        //             "FBNAME" : "raheem",
-        //             "FBPIC":"dd",
-        //             "FBCITY":"hyderabad",
-        //             "FBCOUNTRY":"india",
-        //             "deviceToken":"1",
-        //             "EMAIL" : "raheem@gmail.com" 
-        //     });
+        socket.emit('logInWithFacebook',
+          {
+                    "FBID" : "12345684",
+                    "FBNAME" : "raheem",
+                    "FBPIC":"dd",
+                    "FBCITY":"hyderabad",
+                    "FBCOUNTRY":"india",
+                    "deviceToken":"1",
+                    "EMAIL" : "raheem@gmail.com" 
+            });
 
-        // socket.emit('getTeamInformation',
-        //   {
-        //             "team1Id" : "1",
-        //             "team2Id" : "4",
-        //             "matchId" : "189337",
-        //             "FBID" : "2234567812",
-        //             "mtype" : "t20"
+        socket.emit('getTeamInformation',
+          {
+                    "team1Id" : "1",
+                    "team2Id" : "4",
+                    "matchId" : "189337",
+                    "FBID" : "2234567812",
+                    "mtype" : "t20"
 
-        //     });
-        // socket.emit('getPlayerInformation',{"playerId":10181});
+            });
+        socket.emit('getPlayerInformation',{"playerId":10181});
 
-        socket.emit('getPlayerCurrentPrice',{"playerId":4035,"matchId":"189337"});
+       socket.emit('getPlayerCurrentPrice',{"playerId":4035,"matchId":"189337"});
 
-        // socket.emit('getBidInformation',{"playerId":29679,"matchId":"189337","FBID" : "910220819018643"});
+        socket.emit('getBidInformation',{"playerId":29679,"matchId":"189337","FBID" : "910220819018643"});
 
-      //   socket.emit('setBidInformation',{
-      //               "matchId" : "190482",
-      //               "playerId" : 4035,
-      //               "FBID" : "1245687985878131241",
-      //               "bidAmount" : 1000
-      //   })
+        socket.emit('setBidInformation',{
+                    "matchId" : "190482",
+                    "playerId" : 4035,
+                    "FBID" : "12345684",
+                    "bidAmount" : 1000
+        })
 
-      // socket.emit('updateBidInformation',{
-      //               "matchId" : "190482",
-      //               "playerId" : 4035,
-      //               "FBID" : "124568798587813124",
-      //               "oldbid" : 1000,
-      //               "newbid" : 700
-      //   })
-        //  socket.emit('deleteBidInformation',{
-        //             "matchId" : "190482",
-        //             "playerId" : 10181,
-        //             "FBID" : "124568798587813124",
-        //             "bidAmount" : 1000
-        // })
+        socket.emit('chat',{
+          "FBID" : "123456841",
+          "message" : "hi how r u"
+        })
+
+      socket.emit('updateBidInformation',{
+                    "matchId" : "190482",
+                    "playerId" : 4035,
+                    "FBID" : "124568798587813124",
+                    "oldbid" : 1000,
+                    "newbid" : 700
+        })
+         socket.emit('deleteBidInformation',{
+                    "matchId" : "190482",
+                    "playerId" : 10181,
+                    "FBID" : "124568798587813124",
+                    "bidAmount" : 1000
+        })
       socket.emit('sellplayer',{
                     "matchId" : "190482",
                     "playerId" : 10181,
@@ -101,40 +106,40 @@
                     "player_price" : 100
         })
 
-    //   socket.emit('InviteFriends',{
-    //                 "FBID" : "1505563059728249",
-    //                 "acceptedFBID" : "55055630597282490"
+      socket.emit('InviteFriends',{
+                    "FBID" : "1505563059728249",
+                    "acceptedFBID" : "55055630597282490"
                     
-    //     })
+        })
 
-    //     // socket.emit('AskFriendsAccept',{
-    //     //             "FBID" : "1505563059728249"
+        socket.emit('AskFriendsAccept',{
+                    "FBID" : "1505563059728249"
                     
                     
-    //     // })
+        })
 
-     // socket.emit('getUserPlayers',{
-     //                "FBID" : "1245687985878131",
-     //                "matchId" : "190482"
+     socket.emit('getUserPlayers',{
+                    "FBID" : "1245687985878131",
+                    "matchId" : "190482"
                     
-     //    })
+        })
 
-    //  socket.emit('createPrivateLeague',{ 
-    //   "FBID" : "1505563059728251", 
-    //   "leagueName" : "league2", 
-    //   "matchId" : "1235" 
-    // })
+     socket.emit('createPrivateLeague',{ 
+      "FBID" : "1505563059728251", 
+      "leagueName" : "league2", 
+      "matchId" : "1235" 
+    })
 
-    //   socket.emit('joinLeague',{ 
-    //     "FBID" : "5505563059728250", 
-    //     "leagueId" : "54882284290df9a921f756c9", 
-    //     "matchId" : "1235" 
-    //   }) 
+      socket.emit('joinLeague',{ 
+        "FBID" : "5505563059728250", 
+        "leagueId" : "54882284290df9a921f756c9", 
+        "matchId" : "1235" 
+      }) 
 
-    //   socket.emit('createPublicLeague',{ 
-    //     "FBID" : "1505563059728249", 
-    //     "matchId" : "1235" 
-    //   })
+      socket.emit('createPublicLeague',{ 
+        "FBID" : "1505563059728249", 
+        "matchId" : "1235" 
+      })
 
        //              //while loop ends here 
       });
