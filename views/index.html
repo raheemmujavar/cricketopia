@@ -39,17 +39,17 @@
     $(document).ready(function(){
       var socket = io.connect();
       var uid = 'raheemdd';
-      var google_id,room;
+      var FBID,room;
       socket.on('connect', function(){
           
-         // google_id = prompt("what is your google id?");
+         // FBID = prompt("what is your Facebook id?");
          //  room = prompt("enter your youtube id");
           //google_id = 'mujavar@gmail.com';
-      // room = 'xW_AsV7k42o';
+       FBID = '1505563059728251';
          
         socket.emit('logInWithFacebook',
           {
-                    "FBID" : "12345684",
+                    "FBID" : "55055630597282490",
                     "FBNAME" : "raheem",
                     "FBPIC":"dd",
                     "FBCITY":"hyderabad",
@@ -63,83 +63,88 @@
                     "team1Id" : "1",
                     "team2Id" : "4",
                     "matchId" : "189337",
-                    "FBID" : "2234567812",
+                    "FBID" : "867602899946868",
                     "mtype" : "t20"
 
             });
-        socket.emit('getPlayerInformation',{"playerId":10181});
+      //   socket.emit('getPlayerInformation',{"playerId":10181});
 
-       socket.emit('getPlayerCurrentPrice',{"playerId":4035,"matchId":"189337"});
+      //  socket.emit('getPlayerCurrentPrice',{"playerId":4035,"matchId":"189337"});
 
-        socket.emit('getBidInformation',{"playerId":29679,"matchId":"189337","FBID" : "910220819018643"});
+      //   socket.emit('getBidInformation',{"playerId":29679,"matchId":"189337","FBID" : "910220819018643"});
 
-        socket.emit('setBidInformation',{
-                    "matchId" : "190482",
-                    "playerId" : 4035,
-                    "FBID" : "12345684",
-                    "bidAmount" : 1000
-        })
+      //   socket.emit('setBidInformation',{
+      //               "matchId" : "189337",
+      //               "playerId" : 29679,
+      //               "FBID" : "666362516816084",
+      //               "bidAmount" : 60
+      //   })
 
-        socket.emit('chat',{
-          "FBID" : "123456841",
-          "message" : "hi how r u"
-        })
+     
 
-      socket.emit('updateBidInformation',{
-                    "matchId" : "190482",
-                    "playerId" : 4035,
-                    "FBID" : "124568798587813124",
-                    "oldbid" : 1000,
-                    "newbid" : 700
-        })
-         socket.emit('deleteBidInformation',{
-                    "matchId" : "190482",
-                    "playerId" : 10181,
-                    "FBID" : "124568798587813124",
-                    "bidAmount" : 1000
-        })
-      socket.emit('sellplayer',{
-                    "matchId" : "190482",
-                    "playerId" : 10181,
-                    "FBID" : "1245687985878131",
-                    "bid" : 132,
-                    "player_price" : 100
-        })
+      // socket.emit('updateBidInformation',{
+      //               "matchId" : "190482",
+      //               "playerId" : 60014,
+      //               "FBID" : "58487587854897",
+      //               "oldbid" : 10,
+      //               "newbid" : 700
+      //   })
+      //    socket.emit('deleteBidInformation',{
+      //               "matchId" : "190482",
+      //               "playerId" : 10181,
+      //               "FBID" : "124568798587813124",
+      //               "bidAmount" : 1000
+      //   })
+      // socket.emit('sellplayer',{
+      //               "matchId" : "190482",
+      //               "playerId" : 10181,
+      //               "FBID" : "1245687985878131",
+      //               "bid" : 132,
+      //               "player_price" : 100
+      //   })
 
-      socket.emit('InviteFriends',{
-                    "FBID" : "1505563059728249",
-                    "acceptedFBID" : "55055630597282490"
+      // socket.emit('InviteFriends',{
+      //               "FBID" : "58487587854895",
+      //               "acceptedFBID" : ["55055630597282490","867602899946868"]
                     
-        })
+      //   })
 
         socket.emit('AskFriendsAccept',{
-                    "FBID" : "1505563059728249"
+                    "FBID" : "58487587854895",
+                    "FriendFBID" : "55055630597282490"
                     
                     
         })
 
-     socket.emit('getUserPlayers',{
-                    "FBID" : "1245687985878131",
-                    "matchId" : "190482"
+    //  socket.emit('getUserPlayers',{
+    //                 "FBID" : "867602899946868",
+    //                 "matchId" : "189337"
                     
-        })
+    //     })
 
-     socket.emit('createPrivateLeague',{ 
-      "FBID" : "1505563059728251", 
-      "leagueName" : "league2", 
-      "matchId" : "1235" 
-    })
+    //  socket.emit('createPrivateLeague',{ 
+    //   "FBID" : "1505563059728251", 
+    //   "leagueName" : "league2", 
+    //   "matchId" : "1235" 
+    // })
 
-      socket.emit('joinLeague',{ 
-        "FBID" : "5505563059728250", 
-        "leagueId" : "54882284290df9a921f756c9", 
-        "matchId" : "1235" 
-      }) 
+    //   socket.emit('joinLeague',{ 
+    //     "FBID" : "5505563059728250", 
+    //     "leagueId" : "54882284290df9a921f756c9", 
+    //     "matchId" : "1235" 
+    //   }) 
 
-      socket.emit('createPublicLeague',{ 
-        "FBID" : "1505563059728249", 
-        "matchId" : "1235" 
-      })
+    //   socket.emit('createPublicLeague',{ 
+    //     "FBID" : "1505563059728249", 
+    //     "matchId" : "1235" 
+    //   })
+
+
+    //  socket.emit('getchatInfo',
+    //  {
+    //    "matchId" : 1235,
+    //    "FBID" : "1505563059728251"
+    //  })
 
        //              //while loop ends here 
       });
@@ -147,18 +152,22 @@
        var timest = Date.now(),name1= '',yid='',chat_id='';
 
       //message socket starts here
-       socket.on('message', function(data){
-         timest = data.timest;
-      // insertMessage(data);
-                insertMessage(data.message, data.username, data.timest, data.chatid, data.userlike, data.likescount, data.spoiler);
-       });
-       //message socket ends here
 
-       //socket to find out no of users watch the same url
-       socket.on('roomcount', function(data){
-             $('#roomcount').append(data.visits);
-       });
-       //roomcount socket ends here
+      socket.on('message1', function(data){
+       //  timest = data.timest;
+        
+       //  var timest = new Date(timestamp).format("dd-MM-yyyy hh:mm");
+        insertMessage(data.message, data.FBID, data.timestamp);
+      });
+
+       socket.on('privatechat', function(data){
+       //  timest = data.timest;
+        
+       //  var timest = new Date(timestamp).format("dd-MM-yyyy hh:mm");
+        insertMessage(data.message, data.FBID, data.timestamp);
+      });
+
+
 
       $('#chat_input').keypress(function(e){
         if(e.keyCode == 13 && !e.shiftKey) {
@@ -171,9 +180,18 @@
         var chatInput = $('#chat_input');
         var message = chatInput.val();
         chatInput.val("");
-        insertMessage(message,name1,timest,chat_id);
-        //alert('hi');
-        socket.emit('message', ''+message);
+        insertMessage(message);
+        socket.emit('message1', {
+          message : message ,
+          FBID : FBID,
+          timestamp : new Date()
+        });
+        socket.emit('privatechat', {
+          matchId : 1235,
+          message : message ,
+          FBID : FBID,
+          timestamp : new Date()
+        });
       }
 
       $('#chat_form').on('submit', function(e){
@@ -181,52 +199,43 @@
         formSubmit();
       });
 
+
+
       //this method does not prevent XSS!!
-      var insertMessage = function(message, name, wakt, chat_id, userlike, likescount, spoiler){
+      var insertMessage = function(message,FBID, wakt){
         var li;
-        var datdiff = new Date(wakt);
-        var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-        var regex = new RegExp(expression);
-        var t = message;
-        var like;
-      
-        message = message.replace(t.match(regex),'<a href=http://'+t.match(regex)+' target="_blank"><font color="yellow">'+t.match(regex)+'</font></a>');
-
-        if(userlike==false)
-           {
-            like = '<a href="javascript:void(0);" id=l'+chat_id+' >Like</a> '+likescount;
-         }
-        else
-          {
-             like = '<a href="javascript:void(0);" id=u'+chat_id+' >Un-Like</a> '+likescount;
-          }
-
-              if (name){
-                li = '<li class="message"><span class="name">' + name + ':</span><br />' + message + '<br>'+datdiff+'<br>'+chat_id+'<br><a href="javascript:viod(0);" id=spoiler'+chat_id+'>Spoiler('+spoiler+')</spoilar>&nbsp&nbsp'+like+' &nbsp&nbsp Comment &nbsp&nbsp<a href="javascript:void(0);" id=block'+chat_id+'> Block </a></li> '
-              }else{
-                li = '<li class="message self">' + message + ' <br>' + datdiff +'</li>'
-              }
-              $('#chatbox').append(li);
-        
-           $("#l"+chat_id).on("click",function(){
-               socket.emit('like',{like_chat_id:chat_id,like_mail_id:google_id,like_msgstatus : true});
-           });
-            $("#u"+chat_id).on("click",function(){
-               socket.emit('like',{like_chat_id:chat_id,like_mail_id:google_id,like_msgstatus : false});
-           });
-           $("#block"+chat_id).on("click",function(){
-            //alert(name);
-               socket.emit('block',{spamusr_mail_id:name,actusr_mail_id:google_id});
-           });
-           $("#spoiler"+chat_id).on("click",function(){
-            //alert(name);
-               socket.emit('spoiler',{chatid:chat_id});
-           });
-           //like socket emit ends here 
+ var datdiff = new Date(wakt);
+ li = 'hi raheem';
+        if (FBID){
+          li = '<li class="message"><span class="name">' + FBID + ':</span><br />' + message + '<br>'+datdiff+'</li>'
+        }else{
+          li = '<li class="message self">' + message + ' <br>'+datdiff+'</li>'
+        }
+        $('#chatbox').append(li);
       }
-      //insertMessage function ends here 
     })
-    //ready function ends here
   </script>
+
 </body>
 </html>
+
+<!-- { "_id" : "380501838774394", "FBNAME" : "Jugal Kishore Patel" }
+{ "_id" : "854937887860995", "FBNAME" : "Sai Charan" }
+{ "_id" : "898680880150537", "FBNAME" : "Sathya Prakash" }
+{ "_id" : "1501194273503103", "FBNAME" : "Raheem Shaik" }
+{ "_id" : "484439598361527", "FBNAME" : "Francis Smith" }
+{ "_id" : "10204559783931285", "FBNAME" : "Dilip Semwal" }
+{ "_id" : "835079899888545", "FBNAME" : "Sameer Sonu" }
+{ "_id" : "10152945638632628", "FBNAME" : "Daivesh Kulkarni" }
+{ "_id" : "10152965461735127", "FBNAME" : "Giridhar Reddy" }
+{ "_id" : "1012363385457456", "FBNAME" : "Sandeep Kothapalli" }
+{ "_id" : "10152144695086150", "FBNAME" : "Sreedhar Kanuri" }
+{ "_id" : "10152319906326150", "FBNAME" : "Sreedhar Kanuri" }
+{ "_id" : "10152366601008568", "FBNAME" : "Tejaswy Nandury" }
+{ "_id" : "10152691325095339", "FBNAME" : "Sachin Ravi" }
+{ "_id" : "10154753747000401", "FBNAME" : "Disha Sharma" }
+{ "_id" : "10154810120805057", "FBNAME" : "Mayank Khanduja" }
+{ "_id" : "10202707553158805", "FBNAME" : "Ketna Kanodia" }
+{ "_id" : "10204141842419862", "FBNAME" : "Saikrishna Rangineni" }
+{ "_id" : "10204921606670496", "FBNAME" : "Sharath Jutur" }
+{ "_id" : "10205166754031123", "FBNAME" : "Bharghav Sai" } -->

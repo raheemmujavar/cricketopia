@@ -1,7 +1,7 @@
 //load local modules
 var db = require('./db');
-//var redisip = '127.0.0.1';
-var redisip = 'quizredis.qnsdtp.0001.apse1.cache.amazonaws.com';
+var redisip = '127.0.0.1';
+//var redisip = 'quizredis.qnsdtp.0001.apse1.cache.amazonaws.com';
 //require necessary modules
 var http = require('http')
   , express = require('express')
@@ -34,9 +34,9 @@ app.get('/', function(request, response){
 app.get('/chat' , function(request, response){
   response.sendfile(__dirname + settings.view_directory + '/chat.html')
 });
-
-var MatchSchedule = [], FBID = '', userplayersarr = [], Credits = '', FBNAME = '', teaminfo = [], playerinfo = [], playerinfo1 = [], playerIndinfo = [], teamplayers = [], MatchShortNames = [], playerBidinfo = [];
-
+var room_name;
+var MatchSchedule = [], FBID = '', userplayersarryes = [], userplayersarrno = [], Credits = '', FBNAME = '', teaminfo = [], playerinfo = [], playerinfo1 = [], playerIndinfo = [], teamplayers = [], MatchShortNames = [], playerBidinfo = [];
+var playerstatusupdatearray = [] , userplayerstatusupdatearray = [];
   var data = new Array( 10 );
 
 for ( var i = 0; i < data.length; i++ ) {
@@ -44,7 +44,7 @@ for ( var i = 0; i < data.length; i++ ) {
 }
 
 
-console.log('standard deviation is '+ stdev( data ) );
+//console.log('standard deviation is '+ stdev( data ) );
 
   function getMatchSchedule(FBID,callback){
      db.userSchema.find({"_id":FBID},{Credits : 1}).exec(function(err,docs){
@@ -61,28 +61,194 @@ console.log('standard deviation is '+ stdev( data ) );
             }
       });
       
-      db.Match_Schedule.find({EndDate : {$gt :new Date()}}).sort({StartDate : 1}).limit(6).exec(function(err,docs){
+      // db.match_shedules.find({EndDate : {$gt :new Date()}}).sort({StartDate : 1}).limit(6).exec(function(err,docs){
+      //   if(err)console.log(err);
+      //       else{
+      //         if(docs){
+      //                      for(var i = 0; i < docs.length; i++)  
+      //                             { 
+      //                               MatchSchedule.push(docs[i]);
+      //                               console.log('start date '+docs[i].StartDate)
+      //                               if(i === docs.length - 1)
+      //                               {
+      //                                 callback();
+      //                               } 
+      //                             };
+      //         }          
+      //       }
+      // });
+
+       db.match_shedules.find({EndDate : {$gt :new Date()} }).sort({StartDate : 1}).limit(6).exec(function(err,docs){
         if(err)console.log(err);
             else{
               if(docs){
+                           var x=0;
+                           var y = docs.length;                
                            for(var i = 0; i < docs.length; i++)  
                                   { 
-                                    MatchSchedule.push(docs[i]);
-                                    console.log('start date '+docs[i].StartDate)
-                                    if(i === docs.length - 1)
-                                    {
-                                      callback();
-                                    } 
-                                  };
+                                    (function(i){
+                                    // MatchSchedule.push(docs[i]);
+                                       console.log('start date '+docs[i].team2.teamId)
+                                       db.team_infos.find({teamId:docs[i].team1.teamId}).exec(function(err,team1docs){
+                                      if(err)console.log(err);
+                                          else{
+                                            if(team1docs){
+                                              console.log('get team information length is -----------------------'+team1docs[0].teamLargeRoundFlagPath);
+                                              for(var j = 0; j < team1docs.length; j++)  
+                                                {
+                                                  (function(j){
+                                                  //console.log('get team information length is -----------------------'+team1docs[j].teamLargeRoundFlagPath);
+
+                                                     db.team_infos.find({teamId:docs[i].team2.teamId}).exec(function (err,team2docs){
+                                                      if(err) console.log(err);
+                                                      else
+                                                      {
+                                                        x++;
+                                                        if(team2docs)
+                                                        {
+                                                          
+                                                          for(var k=0;k<team2docs.length;k++)
+                                                          {
+
+                                                             var matchjson = {
+                                                                 matchId : docs[i].matchId,
+                                                                 mtype : docs[i].mtype,
+                                                                 series_id : docs[i].series_id,
+                                                                 series_name : docs[i].series_name,
+                                                                 MatchNo : docs[i].MatchNo,
+                                                                 StartDate : docs[i].StartDate,
+                                                                 EndDate : docs[i].EndDate,
+                                                                 team1Id : docs[i].team1.teamId,
+                                                                 team2Id : docs[i].team2.teamId,
+                                                                 team1logo : team1docs[j].teamLargeRoundFlagPath,
+                                                                 team1name : team1docs[j].teamName,
+                                                                 team1shortname : team1docs[j].teamShortName,
+                                                                 team2logo : team2docs[k].teamLargeRoundFlagPath,
+                                                                 team2name : team2docs[k].teamName,
+                                                                 team2shortname : team2docs[k].teamShortName
+                                                               }
+                                                               MatchSchedule.push(matchjson);
+                                                              // console.log(matchjson);
+
+
+
+                                                          }
+                                                        
+                                                        }
+                                                                if(x === y)
+                                                                  {
+                                                                    callback();
+                                                                  } 
+                                                      }
+                                                    });
+                                                        // if(x == n)
+                                                        //   {
+                                                        //     callback();
+                                                        //   }
+                                                  })(j)
+                                                } 
+
+
+                               
+                                                }
+                                            }                            
+                                          
+                                                               
+                                    });
+                           
+                               })(i)
+                               
+                               };
               }          
             }
-      });
+        });
+
+
   }
   //end of getMatchschedule function
+function getmatch(){
+  var tempDate,match= [],match1=[];
+     db.match_shedules.find({EndDate : {$gt :new Date()} }).sort({StartDate : 1}).limit(6).exec(function(err,docs){
+        if(err)console.log(err);
+            else{
+              if(docs){
+                 for(var i = 0; i < docs.length; i++)  
+                           { 
+                                    // var StartDate = docs[i].StartDate;
+                                    // var tempDate;
+                                    var day = docs[i].StartDate.getDate();
+                                    var month = docs[i].StartDate.getMonth()+1;
+                                    var year = docs[i].StartDate.getFullYear();
+                                    var date = year+'-'+month+'-'+day; 
+                                    console.log('match dAtes '+date);
+                                    if(date == tempDate)
+                                    {
+                                      //  var matchjson = {
+                                      //   SameDate : docs[i].StartDate,
+                                      // }
+                                       var matchInfo =  {
+                                             match1Id : docs[i].matchId,
+                                             mtype : docs[i].mtype,
+                                             series_id : docs[i].series_id,
+                                             series_name : docs[i].series_name,
+                                             MatchNo : docs[i].MatchNo,                                             
+                                             EndDate : docs[i].EndDate,
+                                             team1Id : docs[i].team1.teamId,
+                                             team2Id : docs[i].team2.teamId
+                                           }
+                                           match1.push(JSON.stringify(matchInfo));
+                                           match.push(match1);
+                                           match1=[];
+                                           console.log(matchInfo);
+
+                                    }
+                                    else
+                                    {
+                                       var matchjson = {
+                                        StartDate : docs[i].StartDate
+                                          }
+                                          var matchInfo =  {
+                                             matchId : docs[i].matchId,
+                                             mtype : docs[i].mtype,
+                                             series_id : docs[i].series_id,
+                                             series_name : docs[i].series_name,
+                                             MatchNo : docs[i].MatchNo,                                             
+                                             EndDate : docs[i].EndDate,
+                                             team1Id : docs[i].team1.teamId,
+                                             team2Id : docs[i].team2.teamId
+                                           }
+                                            
+                                            match1.push(JSON.stringify(matchInfo));
+                                            matchjson.matchInfo = match1;
+                                            match1 = [];
+                                    match.push(matchjson);
+                                    console.log(matchjson);
+                                         
+                                      tempDate = date;
+
+                                    }
+                                    
+
+                                 
+                                       
+                                           //console.log(match);
+                                    
+          
+
+                   }
+
+
+              }
+            }
+          });
+
+
+}
+//getmatch()
 
 
   function getTeamInfo(match_Id,team1,team2,FBID,callsback){
-   db.Team_Info.find({teamId:{$in:[team1,team2]}}).exec(function(err,docs){
+   db.team_infos.find({teamId:{$in:[team1,team2]}}).exec(function(err,docs){
                         if(err)console.log(err);
                             else{
                               if(docs){
@@ -98,20 +264,20 @@ console.log('standard deviation is '+ stdev( data ) );
   }
   //end of getTeamInfo function
 
-//db.Match_Players.aggregate([{ $unwind : "$teams" }, {$match : {"matchId" : parseInt(match_Id) } },{ $project : {    matchid : "$matchId" , team : "$teams.teamId",  players : "$teams.players.playerId"} } ])
+//db.matchplayers.aggregate([{ $unwind : "$teams" }, {$match : {"matchId" : parseInt(match_Id) } },{ $project : {    matchid : "$matchId" , team : "$teams.teamId",  players : "$teams.players.playerId"} } ])
 
   function getTeamWisePlayers(matchId,team1,team2,FBID,mtype,maincallback){
       var player_info_object = [];
-      db.Match_Players.aggregate([{ $unwind : "$teams" }, {$match : {"matchId" : parseInt(matchId) } },{ $project : {    matchid : "$matchId" , team : "$teams.teamId",  players : "$teams.players.playerId"} } ],function(err,docs){
+      db.matchplayers.aggregate([{ $unwind : "$teams" }, {$match : {"matchId" : parseInt(matchId) } },{ $project : {    matchid : "$matchId" , team : "$teams.teamId",  players : "$teams.players.playerId"} } ],function(err,docs){
           if(docs.length>0){
                 var players_list = [];
-                for(var i=0;i<docs[0].players.length;i++){
-                  players_list.push(docs[0].players[i])
+                //console.log('player length '+docs.palyers.length);
+
+                for(var i = 0;i<docs.length;i++){
+                      for(var j=0;j<docs[i].players.length;j++){
+                        players_list.push(docs[i].players[j])
+                      }
                 }
-                for(var i=0;i<docs[1].players.length;i++){
-                  players_list.push(docs[1].players[i])
-                }
-                //console.log(players_list)
                 var j=0;n=players_list.length;
                 for(var i=0;i<players_list.length;i++){
                      (function(i){
@@ -127,7 +293,7 @@ console.log('standard deviation is '+ stdev( data ) );
          //                       }
          //                     });
 
-                            db.Player_Info.findOne({playerId : players_list[i]},{playerId:1,country:1,firstName:1,lastName:1,fullname:1,teamId:1, image : 1, pic_url : 1, batting_info : 1, bowling_info : 1},function(err,playerDoc){
+                            db.player_profiles.findOne({playerId : players_list[i]},{playerId:1,country:1,firstName:1,lastName:1,fullname:1,teamId:1, image : 1, pic_url : 1, batting_info : 1, bowling_info : 1},function(err,playerDoc){
                             if(err)console.log(err);
                             else{
                               if(playerDoc){
@@ -141,21 +307,26 @@ console.log('standard deviation is '+ stdev( data ) );
                                       player_price = res;
                                       //console.log('player curr_price for matchid = '+matchId+' and player id = '+players_list[i]+' is '+player_price);
                                     }
+                                   // console.log('fbid is '+FBID);
 
 
                                       db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" },{ $match :{ "matchId" : matchId,"playerId" :parseInt(players_list[i]),"bidInfo.FBID" : FBID}}]).exec(function(err, biddata){
                                           if(err)console.log(err);
                                               else{
-                                                var indbid = 0,biddelete = 0;
+                                                var indbid = 0,biddelete = 0,playeradded = 'no';
+                                               // console.log('biddata length '+biddata.length);
                                                   if(biddata){
-                                                              for(var i = 0; i < biddata.length; i++)  
+                                                              for(var w = 0; w < biddata.length; w++)  
                                                                                           { 
-                                                              var bid = JSON.stringify(biddata[i]);
-                                                              indbid = biddata[i].bidInfo.bidAmount;
-                                                              biddelete = biddata[i].bidInfo.deleted;
+                                                              var bid = JSON.stringify(biddata[w]);
+                                                              indbid = biddata[w].bidInfo.bidAmount;
+                                                              biddelete = biddata[w].bidInfo.deleted;
+                                                              playeradded = biddata[w].bidInfo.playerAdded;
+//console.log('bid amount inside '+indbid);
                                                               }
                                                      
                                                         }
+                                                       // console.log('bid amount outside player id  '+indbid);
                                                  var playerjson = {
                                                       "matchId" : matchId,
                                                       "playerId": playerDoc.playerId,
@@ -168,7 +339,8 @@ console.log('standard deviation is '+ stdev( data ) );
                                                       "pic_url" : playerDoc.pic_url,
                                                       "player_price" : player_price,
                                                       "bid" : indbid,
-                                                      "deleted" : biddelete
+                                                      "deleted" : biddelete,
+                                                      "player_added" : playeradded
                                                     };
                                                       if(mtype==='t20')
                                                       {
@@ -223,16 +395,16 @@ console.log('standard deviation is '+ stdev( data ) );
       maincallback(player_info_object)
 
     }
-    //end of if(doc) Team_info
+    //end of if(doc) team_infos
   })
-  //end of Team_Info query
+  //end of team_infos query
 }
 //end of getTeamWisePlayers function
 
 
   function getMatchShortNames(callback)
   {
-                    db.Team_Info.find({},{"teamName":1,"teamShortName":1,"_id":0}).exec(function(err,docs){
+                    db.team_infos.find({},{"teamName":1,"teamShortName":1,"_id":0}).exec(function(err,docs){
                         if(err)console.log(err);
                             else{
                               if(docs){
@@ -259,7 +431,7 @@ console.log('standard deviation is '+ stdev( data ) );
 
   function getPlayerInfo(player,callback){
   //  console.log('player '+player);
-  db.Player_Info.find({playerId : player}).exec(function(err,docs){
+  db.player_profiles.find({playerId : player}).exec(function(err,docs){
         if(err)console.log(err);
             else{
               if(docs){
@@ -348,7 +520,7 @@ db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" },{$match : {"matchId" : ma
                                   for(var i = 0; i < docs.length; i++)  
                                     { 
                                         (function(i){
-                                           db.Player_Info.findOne({playerId : docs[i].playerId},{playerId:1,country:1,firstName:1,lastName:1,fullname:1,teamId:1, image : 1, pic_url : 1},function(err,playerDoc){
+                                           db.player_profiles.findOne({playerId : docs[i].playerId},{playerId:1,country:1,firstName:1,lastName:1,fullname:1,teamId:1, image : 1, pic_url : 1},function(err,playerDoc){
                                               if(err)console.log(err);
                                               else{
                                                 if(playerDoc){
@@ -363,7 +535,10 @@ db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" },{$match : {"matchId" : ma
                                                             //console.log('player curr_price for matchid = '+matchId+' and player id = '+players_list[i]+' is '+player_price);
                                                           }
 
-                                                       var userplayers = {
+                                                          if(docs[i].bidInfo.playerAdded==='yes')
+                                                          {
+                                                            
+                                                             var userplayersyes = {
                                                             "matchId" : docs[i].matchId,
                                                             "playerId" : docs[i].playerId,
                                                             "country" : playerDoc.country,
@@ -373,11 +548,35 @@ db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" },{$match : {"matchId" : ma
                                                             "teamId" : playerDoc.teamId,
                                                             "localimage" : playerDoc.image,
                                                             "pic_url" : playerDoc.pic_url,
-                                                            "bidAmount" : docs[i].bidInfo.bidAmount,
+                                                            "bid" : docs[i].bidInfo.bidAmount,
                                                             "deleted" : docs[i].bidInfo.deleted,
-                                                            "player_price" : player_price 
+                                                            "player_price" : player_price,
+                                                            "player_added" :  docs[i].bidInfo.playerAdded
+                                                              }
+                                                             userplayersarryes.push(userplayersyes);
+
+                                                          }
+                                                          else if(docs[i].bidInfo.playerAdded==='no')
+                                                          {
+                                                            console.log('playeradded is no');
+                                                            var userplayersno = {
+                                                            "matchId" : docs[i].matchId,
+                                                            "playerId" : docs[i].playerId,
+                                                            "country" : playerDoc.country,
+                                                            "firstName" : playerDoc.firstName,
+                                                            "lastName" : playerDoc.lastName,
+                                                            "fullname" : playerDoc.fullname,
+                                                            "teamId" : playerDoc.teamId,
+                                                            "localimage" : playerDoc.image,
+                                                            "pic_url" : playerDoc.pic_url,
+                                                            "bid" : docs[i].bidInfo.bidAmount,
+                                                            "deleted" : docs[i].bidInfo.deleted,
+                                                            "player_price" : player_price,
+                                                            "player_added" :  docs[i].bidInfo.playerAdded
                                                                               }
-                                                       userplayersarr.push(userplayers);
+                                                                 userplayersarrno.push(userplayersno);
+                                                          }
+
                               
                                                        if(j == nn)
                                                           {
@@ -413,104 +612,168 @@ function random (low, high) {
 function ex()
 {
   var d= new Date();
-  // console.log(d.getSeconds());
-  //  console.log(d.getMinutes());
-  //  console.log(d.getHours());
-  //  console.log(d.getDate());
-  //  console.log(d.getFullYear());
-
-  // console.log('time for quizinga ' +d.getMinutes()*60+d.getSeconds());
+     db.userSchema.aggregate([{$unwind : "$FriendsList"},{$match : {"FriendsList" : "55055630597282490"}},{$project : {FBID : "$_id"}}]).exec(function (err,friendslist){
+                                            if(err) console.log(err)
+                                              else
+                                              {
+                                                if(friendslist)
+                                                {
+                                                  for(var k=0;k<friendslist.length;k++)
+                                                  {
+                                                    console.log('fbids in friendslist is '+friendslist[k]._id);
+                                                          db.userSchema.update({_id : friendslist[k]._id}, {$inc : { Credits : 200 } }).exec(function(err, data, raw){
+                                                          if(err)console.log(err);
+                                                              else{
+                                                                  if(data){
+                                                                           client.emit('InviteFriendCreditsssuccess',"Friends Invitation added successfully");
+                                                                          }
+                                                                          else
+                                                                          {
+                                                                            console.log('InviteFriend Credits Failed  ');
+                                                                          }
+                                                                  }
+                                                            });
+                                                  }
+                                                  
+                                                }
+                                              }
+                                          })
 }
 
-ex();
+//ex();
+var playerstatusupdate = {}, userplayerstatusupdate = {};
 
-function updateredis(matchid,playerid,amount,fbid,callback){
+function updateredis(matchid,playerid,amount,fbid,callsback){
 
-       db.Player_Bid_Info.update({"matchId":matchid,"playerId":playerid,"bidInfo.FBID":fbid}, {"$set" : {"bidInfo.$.playerAdded" : "yes"}},function (err, updated){
-                  if(err) {console.log(err)}
-                    else
-                    {
-                      if(updated)
-                      {
-                        //console.log('player assigned  successfully for '+fbid+'with bid amount of '+amount);
-                        redis.srem("bidarray"+matchid+"_"+playerid+"","{\"FBID\":\""+fbid+"\",\"amount\":"+amount+"}")
-                        redis.set("curr_price"+matchid+"_"+playerid+"",amount);
 
-                       db.Player_Bid_Info.update({"matchId":matchid.toString(),"playerId":parseInt(playerid)},{$push: { player_bids:{"bidAmount":amount,"time":new Date()}}},function (err, updated1){
-                        if(err) {console.log(err)}
-                          else
-                          {
-                            if(updated1)
-                            {
-                              //console.log('player bids added ');
+console.log('updateredis is called');
 
-                                 callback();
-                               }
-                             }
-                           })
-                      }
-                    }
-       })
+    db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" }, { $match : { "matchId" : matchid,"bidInfo.FBID" : fbid,"bidInfo.playerAdded" : "yes"
+                                          }},{ $group :{ _id : "$bidInfo.FBID",count : {$sum : 1}}}]).exec(function (err, playerscount1){
+                                            if(err) console.log(err)
+                                              else
+                                              {
+                                                var playerscount = 0;
+                                                if(playerscount1.length>0)
+                                                {
+                                                  playerscount = playerscount1[0].count;
+                                                
+                                                }
+                                                console.log('count of players '+playerscount);
+                                                if(playerscount<=11)
+                                                {
+                                                  console.log('count of players '+playerscount);
+
+                                                         db.Player_Bid_Info.update({"matchId":matchid,"playerId":playerid,"bidInfo.FBID":fbid}, {"$set" : {"bidInfo.$.playerAdded" : "yes"}},function (err, updated){
+                                                                    if(err) {console.log(err)}
+                                                                      else
+                                                                      {
+                                                                        if(updated)
+                                                                        {
+                                                                          //console.log('player assigned  successfully for '+fbid+'with bid amount of '+amount);
+                                                                          redis.srem("bidarray"+matchid+"_"+playerid+"","{\"FBID\":\""+fbid+"\",\"amount\":"+amount+"}")
+                                                                          redis.set("curr_price"+matchid+"_"+playerid+"",amount);
+
+                                                                         db.Player_Bid_Info.update({"matchId":matchid.toString(),"playerId":parseInt(playerid)},{$push: { player_bids:{"bidAmount":amount,"time":new Date()}}},function (err, updated1){
+                                                                          if(err) {console.log(err)}
+                                                                            else
+                                                                            {
+                                                                              if(updated1)
+                                                                              {
+                                                                                   playerstatusupdate = {
+                                                                                      "matchId" : matchid,
+                                                                                      "playerId" : playerid,
+                                                                                      "player_price" : amount
+                                                                                   }
+                                                                                   userplayerstatusupdate = {
+                                                                                     "matchId" : matchid,
+                                                                                      "playerId" : playerid,
+                                                                                      "FBID" : fbid,
+                                                                                      "amount" : amount
+
+                                                                                   }
+                                                                                   console.log('amount '+amount);
+                                                                                 callsback();
+                                                                               }
+
+                                                                            }
+                                                                          })
+                                                                        }
+                                                     
+                                                                      }
+                                                         })
+                                                }
+                                                else
+                                                {
+                                                  console.log('error you have reached 11 members');
+                                                  callsback();
+                                                 
+                                                }
+
+
+                                              }
+
+                                          })
+
+
+
+
+
+
 }
 
 //updateredis();
 
-function redis1(match_Id,playerId){
-
-                      //console.log(players_list[k]);
-
-                              redis.scard("bidarray"+match_Id+"_"+playerId+"",function(err,resp){
-                              if(err){console.log(err)}
-                                else 
-                                {
-                                  //console.log('redis response is '+resp+' for '+players_list[k]);
-                                  if(resp>=1)
-                                  {
-                                     redis.smembers("bidarray"+match_Id+"_"+playerId+"",function(err,members){
-                                      if(err) {console.log(err)}
-                                        else
-                                        {
-                                          if(members)
-                                          {
-                                            var temp = 0;
-                                                for(var i =0 ;i<members.length ; i++){
-                                                  var pmem = JSON.parse(members[i]);
-                                                   if(pmem.amount>temp)
-                                                   {
-                                                       temp=pmem.amount;
-                                                     }
-                                                }
-                                             //   console.log('temp value '+temp);
-
-                                               // redis.srem("bidarray19048263215","{\"FBID\":\"1245687985878551\",\"amount\":100}")
-                                               var pmem ;
-                                                for(var x =0 ;x<members.length ; x++){
-                                                  (function(x){
-                                                   pmem = JSON.parse(members[x]);
+function redis1(match_Id,playerId,callback){
+      redis.scard("bidarray"+match_Id+"_"+playerId+"",function(err,resp){
+          if(err){console.log(err)}
+            else 
+            {
+              //console.log('redis response is '+resp+' for '+players_list[k]);
+              if(resp>=3)
+              {
+                 redis.smembers("bidarray"+match_Id+"_"+playerId+"",function(err,members){
+                  if(err) {console.log(err)}
+                    else
+                    {
+                      if(members)
+                      {
+                        var temp = 0;
+                            for(var i =0 ;i<members.length ; i++){
+                              var pmem = JSON.parse(members[i]);
+                               if(pmem.amount>temp)
+                               {
+                                   temp=pmem.amount;
+                                 }
+                            }
+                           var pmem ;
+                            for(var x =0 ;x<members.length ; x++){
+                              (function(x){
+                               pmem = JSON.parse(members[x]);
+                              
+                             // console.log('temp in outsie '+temp);
+                             // console.log//('pmem amount is '+pmem.amount+' and fbid is '+pmem.FBID);
+                              if(pmem.amount==temp)
+                                    {
+                                       updateredis(match_Id,playerId,pmem.amount,pmem.FBID,function(){
+                                              console.log('player status update '+playerstatusupdate);
                                                   
-                                                 // console.log('temp in outsie '+temp);
-                                                 // console.log//('pmem amount is '+pmem.amount+' and fbid is '+pmem.FBID);
-                                                  if(pmem.amount==temp)
-                                                        {
-                                                         updateredis(match_Id,playerId,pmem.amount,pmem.FBID,function(){
+                                                    playerstatusupdatearray.push(playerstatusupdate);
+                                                    userplayerstatusupdatearray.push(userplayerstatusupdate);
+                                                     callback();
+                                                   });
+                                    }
 
-                                                         });
-                                                        }
-
-                                                 }(x))       
-                                                }
-
-
-                                          }
-                                        }
-                                     });
-                                    console.log('redis length is '+resp);
-                                  }
-                                }
-                          })
-
-
-                    
+                             }(x))       
+                            }
+                      }
+                    }
+                 });
+                console.log('redis length is '+resp);
+              }
+             
+            }
+      })              
 
 }
 
@@ -532,6 +795,7 @@ function createPrivateLeague(leagueData,callback){
         league_obj.leagueName = leagueData.leagueName;
         league_obj.createdBy = leagueData.FBID;
         league_obj.users = users;
+        league_obj.leagueType = "private";
         var league_info_object = new db.Leagues_Info(league_obj)
         league_info_object.save(function(err,rec){
           if(err)
@@ -568,6 +832,7 @@ function createPublicLeague(leagueData,callback){
         league_obj.leagueName = publicLeagueName;
         league_obj.createdBy = leagueData.FBID;
         league_obj.users = users;
+         league_obj.leagueType = "public";
         var league_info_object = new db.Leagues_Info(league_obj)
         league_info_object.save(function(err,rec){
           if(err)
@@ -645,13 +910,15 @@ function PlayerAssign(callsback){
 }
 
 //PlayerAssign();
-
+ //var cricapp = 'public';
 //chat using socket.io
 io.sockets.on('connection', function(client){
 
 
     //socket which inserts logged in user information into userSchema.
     client.on('logInWithFacebook',function(data){
+
+
    // data.FBID = parseInt(random(58487587854875,58487587854950)).toString();
                    FBID = data.FBID;
                    FBNAME = data.FBNAME;
@@ -685,6 +952,52 @@ io.sockets.on('connection', function(client){
                                         new db.userSchema({_id:data.FBID,FBNAME:data.FBNAME,FBPIC:data.FBPIC,FBCITY:data.FBCITY,FBCOUNTRY:data.FBCOUNTRY,EMAIL:data.EMAIL,deviceToken:data.deviceToken,Credits:500,FriendsList:[],CreditsInfo:[{"credit":0,"debit":0,"All_Credits":500,"comment":"Initial State","Created_Date":new Date()}]}).save(function(err,document){
                                       if(err) throw err;
                                       else{
+                                        if(document)
+                                        {
+
+
+                                               db.userSchema.aggregate([{$unwind : "$FriendsList"},{$match : {"FriendsList" : data.FBID}},{$project : {FBID : "$_id"}}]).exec(function (err,friendslist){
+                                                if(err) console.log(err)
+                                                  else
+                                                  {
+                                                    if(friendslist)
+                                                    {
+                                                      for(var k=0;k<friendslist.length;k++)
+                                                      {
+                                                        console.log('fbids in friendslist is '+friendslist[k]._id);
+                                                            db.userSchema.find({"_id":friendslist[k]._id},{Credits : 1}).exec(function(err,docs){
+                                                              if(err)console.log(err);
+                                                                  else{
+                                                                    if(docs){
+                                                                      console.log('credits docs '+docs);
+                                                                       for(var i = 0; i < docs.length; i++)  
+                                                                              { 
+                                                                               var Credits =  docs[i].Credits;
+                                                                                console.log('credits are '+docs[i].Credits);
+                                                                                var amount = 200;
+                                                                               
+                                                                       db.userSchema.update({_id : docs[i]._id}, {$set : { Credits : (parseInt(Credits)+parseInt(amount)) } ,$addToSet:{CreditsInfo:{"credit":200,"debit":0,"All_Credits":(parseInt(Credits)+parseInt(amount)),"comment":"friend added "+data.FBID+"_"+data.FBNAME+"","Created_Date":new Date()}}}).exec(function(err, data){
+                                                                        if(err)console.log(err);
+                                                                            else{
+                                                                                if(data){
+                                                                                         client.emit('InviteFriendCreditsssuccess',"Friends Invitation added successfully");
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                          console.log('InviteFriend Credits Failed  ');
+                                                                                        }
+                                                                                }
+                                                                          });
+};
+                                                                    }          
+                                                                  }
+                                                            });
+                                                      
+                                                      }
+                                                      
+                                                    }
+                                                  }
+                                                })
                                              getMatchShortNames(function(){  
                                               client.emit('getMatchShortNames',MatchShortNames);
                                               MatchShortNames=[];
@@ -698,6 +1011,7 @@ io.sockets.on('connection', function(client){
                                               });
                                               client.emit('success',"new user record inserted successfully");
                                            // console.log('facebook information is saved');
+                                         }
                                           }
                                         });
                               }
@@ -709,19 +1023,33 @@ io.sockets.on('connection', function(client){
                 var team1 = data.team1Id;
                 var team2 = data.team2Id;
                var matchId = data.matchId;
-      //  console.log('team1 at getTeamInformation '+data.team1Id);
-      // console.log('matchId at getTeamInformation '+data.matchId);
-      // console.log('team2 at getTeamInformation '+data.team1Id);
-      // console.log('FBID at getTeamInformation '+data.FBID);
+       console.log('team1 at getTeamInformation '+data.team1Id);
+      console.log('matchId at getTeamInformation '+data.matchId);
+      console.log('team2 at getTeamInformation '+data.team2Id);
+      console.log('FBID at getTeamInformation '+data.FBID);
+      console.log('mtype at getTeamInformation '+data.mtype);
                 console.log('getTeamInformation called');
                  getTeamInfo(matchId,team1,team2,data.FBID,function(){  
                            client.emit('getTeamInfo',teaminfo);
                                               teaminfo = [];
                                      });
               getTeamWisePlayers(matchId,team1,team2,data.FBID,data.mtype,function(player_info_object){
-                           client.emit('getPlayerInfo',player_info_object);
+                        client.emit('getPlayerInfo',player_info_object);
                 player_info_object = [];
               })
+
+               db.Leagues_Info.aggregate([{ $unwind : "$users" },{ $match : { "matchId" : parseInt(data.matchId), "users" : data.FBID,"leagueType" : "private"  } }]).exec(function(err, leagueName){
+                if(err) console.log(err);
+                 else
+                 {
+                    if(leagueName.length>0)
+                    {
+                      console.log('subscribe calll'+leagueName[0].leagueName);
+                      room_name = leagueName[0].leagueName;
+                      sub.subscribe(leagueName[0].leagueName);
+                    }
+                  }
+                })
     });
 
 
@@ -757,6 +1085,8 @@ client.on('setBidInformation',function(data){
       console.log('matchId at setBidInformation '+data.matchId);
       console.log('playerId at setBidInformation '+data.playerId);
       console.log('bidAmount at setBidInformation '+data.bidAmount);
+      if(data.bidAmount>0)
+      {
 
            db.Player_Bid_Info.update(
                 {"matchId":data.matchId,"playerId":parseInt(data.playerId)},
@@ -769,7 +1099,7 @@ client.on('setBidInformation',function(data){
                         if(err)console.log(err);
                             else{
                               if(docs){
-                                console.log('credits docs '+docs);
+                               // console.log('credits docs '+docs);
                                    for(var i = 0; i < docs.length; i++)  
                                           { 
                                            var Credits1 =  docs[i].Credits;
@@ -777,9 +1107,12 @@ client.on('setBidInformation',function(data){
                                            };
                   
                                      db.userSchema.update({_id:data.FBID},{$set : {Credits:(parseInt(Credits1)-parseInt(data.bidAmount))},$addToSet:{CreditsInfo:{"credit":0,"debit":data.bidAmount,"All_Credits":(parseInt(Credits1)-parseInt(data.bidAmount)),"comment":"bid for "+data.matchId+"_"+data.playerId+"","Created_Date":new Date()}}}, function (err, updated){
-                                         if(err) console.log(err);
+                                         if(err) console.log('update '+err);
                                          else
                                          {
+                                           if(updated)
+                                           {
+                                            client.emit('getCredits',{credits : parseInt(Credits1)-parseInt(data.bidAmount)});
                                          // console.log('update userSchema called');
                                           var b = {"FBID":data.FBID,"amount":parseInt(data.bidAmount)} ;
                                                redis.SADD("bidarray"+data.matchId+"_"+data.playerId, JSON.stringify(b),function(err,succ)
@@ -787,10 +1120,17 @@ client.on('setBidInformation',function(data){
                                                       if(err) console.log(err);
                                                       else
                                                       {
-                                                     redis1(data.matchId,data.playerId);
+                                                     redis1(data.matchId,data.playerId,function(){
+                                                      //console.log('playerstatusupdatearray is '+playerstatusupdatearray);
+                                                      client.emit('playerstatusupdate',playerstatusupdatearray);
+                                                      client.emit('userplayerstatusupdate',userplayerstatusupdatearray);
+                                                      playerstatusupdatearray = [];
+                                                      userplayerstatusupdatearray = [];
+                                                     });
                                                       console.log(succ);
                                                     }
                                                     }); 
+                                           } 
                                          }
                                       })
                       var bidmsg = {
@@ -805,16 +1145,26 @@ client.on('setBidInformation',function(data){
                    }
                  });
 
+      }
+      else
+      {
+         client.emit('setbidfail',"bid should not be zero")
+
+      }
+
   });
 
 
  client.on('updateBidInformation',function(data){
-
+      if(data.newbid>0)
+      {
                        db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" }, { $match :{ "matchId" : data.matchId,
-                                  "playerId" : data.playerId,"bidInfo.FBID" : data.FBID } }]).exec(function(err, docs){
+                                  "playerId" : data.playerId,"bidInfo.FBID" : data.FBID } },
+                        { $project : {   "matchId" : 1, "playerId" : 1, "bidInfo.FBID" : 1,"bidInfo.bidAmount" : 1, } }]).exec(function(err, docs){
                                           if(err)console.log(err);
                                               else{
                                                   if(docs){
+                                                   // console.log('oldbid in update bid information is '+docs[0].bidInfo.bidAmount);
                                                       db.Player_Bid_Info.update({"matchId":data.matchId,"playerId":data.playerId,"bidInfo.FBID":data.FBID}, {"$set" : {"bidInfo.$.bidAmount" : data.newbid,"bidInfo.$.deleted":0}}, function (err,updated){
                                                                 if(err) console.log(err);
                                                                 else {
@@ -851,6 +1201,9 @@ client.on('setBidInformation',function(data){
                                                                                            if(err) console.log(err);
                                                                                            else
                                                                                            {
+                                                                                            if(updated)
+                                                                                            {
+                                                                                            client.emit('getCredits',{credits : acredits});
                                                                                            // console.log('update userSchema called');
                                                                                             var b = {"FBID":data.FBID,"amount":parseInt(data.newbid)} ;
                                                                                             var bb = {"FBID":data.FBID,"amount":parseInt(data.oldbid)} ;
@@ -865,13 +1218,18 @@ client.on('setBidInformation',function(data){
                                                                                                               if(err) console.log(err);
                                                                                                               else
                                                                                                               {
-                                                                                                                redis1(data.matchId,data.playerId);
+                                                                                                                   redis1(data.matchId,data.playerId,function(){
+                                                                                                                    client.emit('playerstatusupdate',playerstatusupdatearray);
+                                                                                                                    client.emit('userplayerstatusupdate',userplayerstatusupdatearray);
+                                                                                                                    playerstatusupdatearray = [];
+                                                                                                                    userplayerstatusupdatearray = [];
+                                                                                                                   });
                                                                                                               console.log(succ);
                                                                                                             }
                                                                                                             }); 
                                                                                                       }
                                                                                                   }); 
-
+                                                                                             }
                                                                                             
                                                                                            }
                                                                                         })
@@ -896,11 +1254,17 @@ client.on('setBidInformation',function(data){
                                                          }                                                              
                                                      }
                                            });
+           }
+      else
+      {
+         client.emit('updatebidfail',"bid should not be zero")
+
+      }
     });
 
 
   client.on('deleteBidInformation',function(data){
-                          db.Player_Bid_Info.update({"matchId":data.matchId,"playerId":data.playerId,"bidInfo.FBID":data.FBID}, {"$set" : {"bidInfo.$.deleted":1}}).exec(function(err, docs){
+                          db.Player_Bid_Info.update({"matchId":data.matchId,"playerId":data.playerId,"bidInfo.FBID":data.FBID}, {"$pull" : {"bidInfo":{"FBID":data.FBID}}}).exec(function(err, docs){
                                           if(err)console.log(err);
                                               else{
                                                   if(docs){
@@ -919,28 +1283,51 @@ client.on('setBidInformation',function(data){
                                                                        if(err) console.log(err);
                                                                        else
                                                                        {
-                                                                        console.log('update userSchema called');
-                                                                        var b = {"FBID":data.FBID,"amount":parseInt(data.bidAmount)} ;
-                                                                             redis.srem("bidarray"+data.matchId+"_"+data.playerId, JSON.stringify(b),function(err,succ)
-                                                                                  {
-                                                                                    if(err) console.log(err);
-                                                                                    else
-                                                                                    {
-                                                                                    console.log('bid deleted in redis successfully '+succ);
-                                                                                  }
-                                                                                  }); 
+                                                                         if(updated)
+                                                                         {
+                                                                          client.emit('getCredits',{credits : parseInt(Credits1)+parseInt(data.bidAmount)});
+                                                                            console.log('update userSchema called');
+                                                                            var b = {"FBID":data.FBID,"amount":parseInt(data.bidAmount)} ;
+                                                                                 redis.srem("bidarray"+data.matchId+"_"+data.playerId, JSON.stringify(b),function(err,succ)
+                                                                                      {
+                                                                                        if(err) console.log(err);
+                                                                                        else
+                                                                                        { 
+                                                                                          if(succ)
+                                                                                          {
+                                                                                              console.log('bid deleted in redis successfully '+succ);
+                                                                                                  var deletebidmsg = {
+                                                                                                          "message" : "Bid information is deleted successfully",
+                                                                                                          "bid"  : data.bidAmount
+                                                                                                        }
+                                                                                             client.emit('deleteBidsuccess',deletebidmsg);
+                                                                                           }
+                                                                                           else
+                                                                                           {
+                                                                                               client.emit('deleteBidfail',"bid deletion failed redis not removed");
+                                                                                           }
+                                                                                      }
+                                                                                      }); 
+                                                                         }
+                                                                       else
+                                                                         {
+                                                                             client.emit('deleteBidfail',"bid deletion failed userSchema not updated");
+                                                                         }
                                                                        }
                                                                     })
-                                                     client.emit('deleteBidsuccess',"Bid information is deleted successfully");
+                                                    
+                                                                  }
+                                                                  else
+                                                                  {
+                                                                    client.emit('deleteBidfail',"bid deletion failed user not in records");
                                                                   }          
                                                               }
                                                        });
 
-
-                                                    //console.log('delete bid information'+docs);
-
-                                                   
-                                              
+                                                          }
+                                                          else
+                                                          {
+                                                            client.emit('deleteBidfail',"bid deletion failed user did not bid for this player");
                                                           }
                                                   }
 
@@ -951,9 +1338,15 @@ client.on('setBidInformation',function(data){
 
 
  client.on('sellplayer',function(data){
+        console.log('FBID at sellplayer '+data.FBID);
+      console.log('matchId at sellplayer '+data.matchId);
+      console.log('playerId at sellplayer '+data.playerId);
+      console.log('bidAmount at sellplayer '+data.bid);
+      console.log('bidAmount at sellplayer '+data.player_price);
+
 
                        db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" }, { $match :{ "matchId" : data.matchId,
-                                  "playerId" : data.playerId,"bidInfo.FBID" : data.FBID,"bidInfo.playerAdded" : "yes" } }]).exec(function(err, docs){
+                                  "playerId" : parseInt(data.playerId),"bidInfo.FBID" : data.FBID,"bidInfo.playerAdded" : "yes" } }]).exec(function(err, docs){
                                           if(err)console.log(err);
                                               else{
                                                   if(docs.length>0){
@@ -996,7 +1389,10 @@ client.on('setBidInformation',function(data){
                                                                                            if(err) console.log(err);
                                                                                            else
                                                                                            {
-                                                                                          //  console.log('update userSchema called');
+                                                                                            if(updated)
+                                                                                            {
+                                                                                             client.emit('getCredits',{credits : acredits});
+
                                                                                             var b = {"FBID":data.FBID,"amount":parseInt(data.player_price)} ;
                                                                                             var bb = {"FBID":data.FBID,"amount":parseInt(data.bid)} ;
 
@@ -1015,7 +1411,7 @@ client.on('setBidInformation',function(data){
                                                                                                             }); 
                                                                                                       }
                                                                                                   }); 
-
+                                                                                              }
                                                                                             
                                                                                            }
                                                                                         })
@@ -1050,30 +1446,24 @@ client.on('setBidInformation',function(data){
 
 
    client.on('InviteFriends',function(data){
-                      db.userSchema.update({_id : data.FBID},{ $addToSet : {FriendsList : data.acceptedFBID } }).exec(function(err, docs, raw){
+
+    // console.log('fbid in InviteFriends is -------------------'+data.FBID);
+    // console.log('friends fbids are '+data.acceptedFBID);
+    // for(var i = 0 ;i<data.acceptedFBID.length;i++){
+    //   console.log('data is '+data.acceptedFBID[i]);
+    // }
+                      db.userSchema.update({_id : data.FBID},{ $addToSet : {FriendsList : data.acceptedFBID } }).exec(function (err, docs){
                             if(err)console.log(err);
                                 else{
                                     if(docs){
-                                         db.userSchema.update({_id : data.FBID}, {$inc : { Credits : 200 } }).exec(function(err, data, raw){
-                                          if(err)console.log(err);
-                                              else{
-                                                  if(data){
-                                                           client.emit('InviteFriendCreditsssuccess',"Friends Invitation added successfully");
-                                                          }
-                                                          else
-                                                          {
-                                                            console.log('InviteFriend Credits Failed  ');
-                                                          }
-                                                  }
-                                            });
-                                           console.log('InviteFriendssuccess information '+raw);
+                                                                         
 
-                                          client.emit('InviteFriendssuccess',"Friends Invitation added successfully");
+                                          client.emit('InviteFriendslistAdded',"Friends Invitation added successfully in friends list");
                                               
                                         }
                                     else
                                     {
-                                      console.log('InviteFriend Failed information ');
+                                      client.emit('InviteFriendslistAddedFail',"Friends Invitation added fail in friends list");
                                     }
                                  }
                             });
@@ -1081,28 +1471,82 @@ client.on('setBidInformation',function(data){
 
 
    client.on('AskFriendsAccept',function(data){
-                     db.userSchema.update({_id : data.FBID}, {$inc : { Credits : 100 } }).exec(function(err, docs, raw){
-                                if(err)console.log(err);
-                                    else{
-                                        if(docs){
-                                          console.log('AskFriends information '+docs.nUpserted);
+              db.userSchema.find({"_id":data.FBID},{Credits : 1}).exec(function(err,docs){
+                    if(err)console.log(err);
+                        else{
+                          if(docs){
+                            console.log('credits docs '+docs);
+                             for(var i = 0; i < docs.length; i++)  
+                                    { 
+                                      var Credits =  docs[i].Credits;
+                                      console.log('credits are '+docs[i].Credits);
+                                      var amount = 100;
+                                     
+                                       db.userSchema.update({_id : docs[i]._id}, {$set : { Credits : (parseInt(Credits)+parseInt(amount)) } ,$addToSet:{CreditsInfo:{"credit":100,"debit":0,"All_Credits":(parseInt(Credits)+parseInt(amount)),"comment":"friend given "+data.FriendFBID+"","Created_Date":new Date()}}}).exec(function(err, data){
+                                        if(err)console.log(err);
+                                            else{
+                                                if(data){
+                                                         //client.emit('AskFriendCreditssuccess',"Friends Invitation added successfully");
+                                                        }
+                                                        else
+                                                        {
+                                                          console.log('AskFriendCreditssuccess Credits Failed  ');
+                                                        }
+                                                }
+                                          });
+                                    }
 
-                                          client.emit('AskFriendCreditssuccess',"Friends Invitation added successfully");
-                                    
-                                         }
-                                        else
-                                        {
-                                          console.log('AskFriend Failed information ');
-                                        }
-                                     }  
-                     });
+                            db.userSchema.find({"_id":data.FriendFBID},{Credits : 1}).exec(function(err,docs){
+                            if(err)console.log(err);
+                                else{
+                                  if(docs){
+                                    console.log('credits docs '+docs);
+                                     for(var i = 0; i < docs.length; i++)  
+                                            { 
+                                              var Credits =  docs[i].Credits;
+                                              console.log('credits are '+docs[i].Credits);
+                                              var amount = 100;
+                                             
+                                               db.userSchema.update({_id : docs[i]._id}, {$set : { Credits : (parseInt(Credits)-parseInt(amount)) } ,$addToSet:{CreditsInfo:{"credit":0,"debit":100,"All_Credits":(parseInt(Credits)-parseInt(amount)),"comment":"friend taken "+data.FBID+"","Created_Date":new Date()}}}).exec(function(err, data){
+                                                if(err)console.log(err);
+                                                    else{
+                                                        if(data){
+                                                                 client.emit('AskFriendCreditssuccess',"Friends Invitation added successfully");
+                                                                }
+                                                                else
+                                                                {
+                                                                   client.emit('AskFriendCreditsFail',"Friends Invitation added fail");
+                                                                  console.log('AskFriendCreditssuccess Credits Failed  ');
+                                                                }
+                                                        }
+                                                  });
+                                            }
+                                          
+                                  }          
+                                }
+                          });
+
+
+
+
+
+                          }          
+                        }
+                  });
+
+
     });
 
 
    client.on('getUserPlayers',function(data){
           getUserPlayers(data.matchId,data.FBID,function(){
-                client.emit('getUserPlayersInfo',userplayersarr);
-                userplayersarr = [];
+            var userplayers = {
+              "yesplayers" : userplayersarryes,
+              "noplayers" : userplayersarrno
+            }
+                client.emit('getUserPlayersInfo',userplayers);
+                userplayersarryes = [];
+                userplayersarrno = [];
            });
 
     });
@@ -1138,24 +1582,136 @@ client.on('setBidInformation',function(data){
         })
 
 
-   client.on("chat",function(data){ 
+  sub.on('message', function(channel,message){
+  //console.log('subscribe is called '+message);
+              client.emit('message1', message);
+              client.emit('privatechat',message);
+          })
 
-    console.log('chat time stamp is '+data.FBID);
-                  new db.chat_Info({FBID : data.FBID,message : data.message,timestamp : new Date()}).save(function(err,document){
+
+   client.on("message1",function(data){ 
+      sub.subscribe('public');
+      console.log('chat time stamp is public '+data.FBID);
+      var who = 'public';
+                  new db.chat_Info({FBID : data.FBID,message : data.message,timestamp : new Date(), who : who}).save(function(err,document){
                       if(err) throw err;
                       else{
-                        console.log('new chat ')
-                              client.emit('success',"new chat record inserted successfully");
+                        console.log('new chat ');
+                        var usermessage = {
+                          "FBID" : data.FBID,
+                          "message" : data.message,
+                          "who" : "public",
+                          "timestamp" : new Date()
+                        }
+
+                        pub.publish('public',JSON.stringify(usermessage),function(err,succ)
+                            {
+                              if(err)console.log(err);
+                              else {console.log(succ);}
+                            });
+                        
+                        //client.broadcast.emit('message',{FBID : data.FBID, message : data.message, timestamp : new Date()})
+                              client.emit('chatsuccess',"new chat record inserted successfully");
                            // console.log('facebook information is saved');
                           }
                         });
+  })
+
+   client.on("privatechat",function(data){ 
+
+
+      db.Leagues_Info.aggregate([{ $unwind : "$users" },{ $match : { "matchId" : parseInt(data.matchId), "users" : data.FBID ,"leagueType" : "private" } }]).exec(function(err, leagueName){
+        if(err) console.log(err);
+         else
+         {
+            if(leagueName.length>0)
+            {
+              sub.subscribe(leagueName[0].leagueName);
+                console.log('league name is '+leagueName[0].leagueName);
+                var who = 'private';
+                        new db.chat_Info({FBID : data.FBID,message : data.message,timestamp : new Date(), who : leagueName[0].leagueName}).save(function(err,document){
+                            if(err) throw err;
+                            else{
+                              console.log('new chat ');
+                              var usermessage = {
+                                "FBID" : data.FBID,
+                                "message" : data.message,
+                                "who" : leagueName[0].leagueName,
+                                "timestamp" : new Date()
+                                 }
+
+                              pub.publish(leagueName[0].leagueName,JSON.stringify(usermessage),function(err,succ)
+                                  {
+                                    if(err)console.log(err);
+                                    else {console.log(succ);}
+                                  });
+                              
+                              //client.broadcast.emit('message',{FBID : data.FBID, message : data.message, timestamp : new Date()})
+                              client.emit('privatechatsuccess',"new chat record inserted successfully");
+                                 // console.log('facebook information is saved');
+                           }
+                         });
+            }
+            else
+            {
+                 console.log('private chat failed becouse user not added in league');
+            }
+           
+         }
+      })
+
+    //console.log('chat time stamp is '+data.FBID);
+  
+ })
+
+
+client.on('getchatInfo',function(data){
+      db.Leagues_Info.aggregate([{ $unwind : "$users" },{ $match : { "matchId" : parseInt(data.matchId), "users" : data.FBID ,"leagueType" : "private" } }]).exec(function(err, leagueName){
+        if(err) console.log(err);
+         else
+         {
+            if(leagueName.length>0)
+            {
+              db.chat_Info.find({who : leagueName[0].leagueName}).exec(function(err, docs){
+                if(err) console.log(err)
+                  else
+                  {
+                    if(docs)
+                    {
+                      var chathistory = [];
+                      for(var i =0 ;i<docs.length;i++){
+                        var chatinfo = {
+                          "messageId" : docs[i]._id,
+                          "FBID" : docs[i].FBID,
+                          "message" : docs[i].message,
+                          "timestamp" : docs[i].timestamp
+                        }
+                         chathistory.push(chatinfo);
+                         client.emit('gettchatInformation',chathistory);
+                        
+                      }
+                    }
+                  }
+              })
+              console.log('chat info '+leagueName[0].leagueName)
+             // sub.subscribe(leagueName[0].leagueName);
+            }
+          }
         })
+
+
+})
+
+
 
 
 
     //disconnect socket code starts form here
         client.on('disconnect', function  () {
           client.emit('exit',{FBID:FBID,FBNAME:FBNAME});
+
+                      sub.unsubscribe(room_name);
+           
           console.log('---------------client disconnected with FBID = '+FBID+' and name = '+FBNAME+'------------');
         //     console.log('client disconnected for '+room_name+' and mail_id is '+google_id+'');
           //       redis.srem(room_name, google_id, function (err,reply){ });

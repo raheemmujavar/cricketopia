@@ -1,5 +1,5 @@
 var mongoose = require( 'mongoose' );
-mongoose.connect( 'mongodb://localhost/cricapp' );
+mongoose.connect( 'mongodb://localhost/mydatabase' );
 var Schema   = mongoose.Schema;
 var Schema1   = mongoose.Schema;
 var Schema2   = mongoose.Schema;
@@ -25,7 +25,7 @@ var userSchema = new Schema({
 exports.userSchema = mongoose.model( 'userSchema', userSchema, userSchemacol );
 
 
-var Match_Schedule = new Schema1({
+var match_shedules = new Schema1({
           matchId : Number, 
           mtype : String, 
           series_id : String, 
@@ -36,11 +36,11 @@ var Match_Schedule = new Schema1({
           team1 : Object, 
           team2 : Object
 });
- var MatchSchedulecol = "Match_Schedule"
-exports.Match_Schedule = mongoose.model( 'Match_Shedule', Match_Schedule, MatchSchedulecol );
+ var match_shedulescol = "match_shedules"
+exports.match_shedules = mongoose.model( 'match_shedules', match_shedules, match_shedulescol );
 
 
-var Team_Info = new Schema2({
+var team_infos = new Schema2({
          teamId : Number, 
          teamName : String, 
          teamShortName : String, 
@@ -53,11 +53,11 @@ var Team_Info = new Schema2({
          teamLargeRoundFlagPath : String, 
          players : Array
 });
- var Team_Infocol = "Team_Info"
-exports.Team_Info = mongoose.model( 'Team_Info', Team_Info, Team_Infocol );
+ var team_infoscol = "team_infos"
+exports.team_infos = mongoose.model( 'team_infos', team_infos, team_infoscol );
 
 
-var Player_Info = new Schema3({
+var player_profiles = new Schema3({
            playerId : Number, 
            teamId : Number, 
            firstName : String, 
@@ -70,33 +70,36 @@ var Player_Info = new Schema3({
            batting_info : Object, 
            bowling_info : Object 
 });
- var Player_Infocol = "Player_Info"
-exports.Player_Info = mongoose.model( 'Player_Info', Player_Info, Player_Infocol );
+ var player_profilescol = "player_profiles"
+exports.player_profiles = mongoose.model( 'player_profiles', player_profiles, player_profilescol );
 
 
 var Player_Bid_Info = new Schema4({
          matchId: String,
          playerId : Number,
          bidInfo : Array,
-         player_bids : Array
+         player_bids : Array,
+         fantasyPoints : Array
+
 });
  var Player_Bid_Infocol = "Player_Bid_Info"
 exports.Player_Bid_Info = mongoose.model( 'Player_Bid_Info', Player_Bid_Info, Player_Bid_Infocol );
 
 
-var Match_Players = new Schema5({
+var matchplayers = new Schema5({
          matchId: Number,
          teams : Object
          
 });
- var Match_Playerscol = "Match_Players"
-exports.Match_Players = mongoose.model( 'Match_Players', Match_Players, Match_Playerscol );
+ var matchplayerscol = "matchplayers"
+exports.matchplayers = mongoose.model( 'matchplayers', matchplayers, matchplayerscol );
 
 
 var Leagues_Info = new Schema6({
          leagueName : String, 
          matchId : Number, 
-         createdBy : String, 
+         createdBy : String,
+         leagueType : String, 
          users : Array
          
 });
@@ -107,7 +110,8 @@ exports.Leagues_Info = mongoose.model( 'Leagues_Info', Leagues_Info, Leagues_Inf
 var chat_Info = new Schema7({
          message : String, 
          FBID : String, 
-         time : Date
+         who : String,
+         timestamp : Date
          
 });
  var chat_Infocol = "chat_Info"
