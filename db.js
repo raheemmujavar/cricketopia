@@ -117,7 +117,7 @@ var chat_Info = new Schema7({
  var chat_Infocol = "chat_Info"
 exports.chat_Info = mongoose.model( 'chat_Info', chat_Info, chat_Infocol );
 
-var x = 0;
+var y = 0;
 
 
 
