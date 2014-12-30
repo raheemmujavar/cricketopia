@@ -117,7 +117,11 @@ var chat_Info = new Schema7({
  var chat_Infocol = "chat_Info"
 exports.chat_Info = mongoose.model( 'chat_Info', chat_Info, chat_Infocol );
 
-var y = 0;
+exports.Notifications = mongoose.model( 'Notifications',{
+         "user": String,
+         "message" : String,
+         "createDate" : Date,
+},"Notifications");
 
 
 

@@ -1,0 +1,6 @@
+************** socket calls ***************
+
+logInWithFacebook  --> insert/update user loggedin user details
+		getMatchShortNames --> all team names and shortNames
+		getMatchSchedule  --> match shedule
+		getCredits  --> user credits

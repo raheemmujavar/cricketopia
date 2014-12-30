@@ -60,7 +60,13 @@ for ( var i = 0; i < data.length; i++ ) {
               }          
             }
       });
-      
+      getmatchNew(function(mainArray){
+        /*for(var i=0;i<mainArray.length;i++){
+          console.log(mainArray[i])
+        }*/
+        MatchSchedule = mainArray;
+        callback()
+      })
       // db.match_shedules.find({EndDate : {$gt :new Date()}}).sort({StartDate : 1}).limit(6).exec(function(err,docs){
       //   if(err)console.log(err);
       //       else{
@@ -78,7 +84,7 @@ for ( var i = 0; i < data.length; i++ ) {
       //       }
       // });
 
-       db.match_shedules.find({EndDate : {$gt :new Date()} }).sort({StartDate : 1}).limit(6).exec(function(err,docs){
+       /*db.match_shedules.find({EndDate : {$gt :new Date()} }).sort({StartDate : 1}).limit(6).exec(function(err,docs){
         if(err)console.log(err);
             else{
               if(docs){
@@ -161,7 +167,7 @@ for ( var i = 0; i < data.length; i++ ) {
                                };
               }          
             }
-        });
+        });*/
 
 
   }
@@ -245,8 +251,128 @@ function getmatch(){
 
 }
 //getmatch()
-
-
+function getmatchNew(callback){
+  var mainArray = [];
+  var tempDate,match= [],match1=[];
+  db.match_shedules.find({EndDate : {$gt :new Date()} }).sort({StartDate : 1}).limit(6).exec(function(err,docs){
+    if(err)console.log(err);
+    else{
+      if(docs){
+        console.log(" get match new ---------------------------------------------------------")
+        var i=0,n=docs.length;
+        console.log("docs length is === " + docs.length)
+        function matchesLoop(i){
+          var day = docs[i].StartDate.getDate();
+              var month = docs[i].StartDate.getMonth()+1;
+              var year = docs[i].StartDate.getFullYear();
+              var date = year+'-'+month+'-'+day; 
+              console.log(date + "-------------------")
+          if(mainArray.length > 0){
+            var j = 0,m=mainArray.length;
+            function mainArrayLoop(j){ // loop main array and search for date if date found push match deatails else create new object with date 
+              var day = docs[i].StartDate.getDate();
+              var month = docs[i].StartDate.getMonth()+1;
+              var year = docs[i].StartDate.getFullYear();
+              var date = year+'-'+month+'-'+day; 
+              getTeamInfoNew(docs[i].team1.teamId,function(teamInfo){ // getting team1 info
+                var team1Info = teamInfo;
+                getTeamInfoNew(docs[i].team2.teamId,function(team2Info){ // getting team2 info
+                  var matchInfo =  {
+                     match1Id : docs[i].matchId,
+                     mtype : docs[i].mtype,
+                     series_id : docs[i].series_id,
+                     series_name : docs[i].series_name,
+                     MatchNo : docs[i].MatchNo,                                             
+                     EndDate : docs[i].EndDate,
+                     team1Info : team1Info,
+                     team2Info : team2Info
+                   };
+                  if(mainArray[j].StartDate == date){
+                    mainArray[j].matchInfo.push(matchInfo);
+                    i++;
+                    if(i != n)
+                      matchesLoop(i)
+                    if(i == n)
+                      callback(mainArray)
+                  }else{
+                    console.log("in else")
+                    j++;
+                    console.log(j + " ==== " + m)
+                    if(j == m){
+                      var dayMatch = {};
+                      dayMatch.StartDate = date;
+                      dayMatch.matchInfo = [];
+                      dayMatch.matchInfo.push(matchInfo);
+                      mainArray.push(dayMatch);
+                      i++;
+                      if(i != n)
+                        matchesLoop(i)
+                      if(i == n)
+                        callback(mainArray)
+                    }
+                    if(j != m)
+                      mainArrayLoop(j);
+                  }
+                })// end of getting team2 info without player info
+              }) // end of getting team1 info without player info
+            }
+            mainArrayLoop(j);
+          }else{
+            var day = docs[i].StartDate.getDate();
+            var month = docs[i].StartDate.getMonth()+1;
+            var year = docs[i].StartDate.getFullYear();
+            var date = year+'-'+month+'-'+day; 
+            var dayMatch = {};
+            dayMatch.StartDate = date;
+            dayMatch.matchInfo = [];
+            getTeamInfoNew(docs[i].team1.teamId,function(teamInfo){
+              var team1Info = teamInfo;
+              getTeamInfoNew(docs[i].team2.teamId,function(team2Info){
+                var matchInfo =  {
+                   match1Id : docs[i].matchId,
+                   mtype : docs[i].mtype,
+                   series_id : docs[i].series_id,
+                   series_name : docs[i].series_name,
+                   MatchNo : docs[i].MatchNo,                                             
+                   EndDate : docs[i].EndDate,
+                   team1Info : team1Info,
+                   team2Info : team2Info
+                 };
+                 dayMatch.matchInfo.push(matchInfo);
+                  mainArray.push(dayMatch);
+                  i++;
+                  if(i != n)
+                    matchesLoop(i)
+                  if(i == n){
+                    callback(mainArray)
+                    console.log("march new ends -------------------------------------------------------------")
+                  }
+              })
+            })
+          }
+        }
+        matchesLoop(i);
+      }
+    }
+  });
+}
+/*getmatchNew(function(mainArray){
+  for(var i=0;i<mainArray.length;i++){
+    console.log(mainArray[i])
+  }
+})*/
+function getTeamInfoNew(teamId,callback){
+  db.team_infos.findOne({teamId:teamId},{_id:0,players:0},function(err,teamInfo){
+    if(err){
+      console.log("error in getting team info " + err);
+    }
+    else{
+      if(teamInfo){
+        callback(teamInfo)
+      }
+    } 
+  })
+}
   function getTeamInfo(match_Id,team1,team2,FBID,callsback){
    db.team_infos.find({teamId:{$in:[team1,team2]}}).exec(function(err,docs){
                         if(err)console.log(err);
@@ -760,6 +886,12 @@ function redis1(match_Id,playerId,callback){
                                                   
                                                     playerstatusupdatearray.push(playerstatusupdate);
                                                     userplayerstatusupdatearray.push(userplayerstatusupdate);
+                                                    // send add player notification starts
+                                                    var nMessage = "playerName has joined your team for the matchName match";
+                                                    sendPlayerAsignNotification(nMessage,playerId,match_Id,pmem.FBID);
+                                                    var nLMessage = "playerName has joined userName's team.";
+                                                    sendPlayerAllotNotificationToLeagueMembers(nLMessage,playerId,match_Id,pmem.FBID)
+                                                    // send add player notification ends
                                                      callback();
                                                    });
                                     }
@@ -964,6 +1096,8 @@ io.sockets.on('connection', function(client){
                                                     {
                                                       for(var k=0;k<friendslist.length;k++)
                                                       {
+                                                        var notificationMessage = data.FBNAME + " has now joined Cricketopia. You get 200 credits!";
+                                                        acceptAppInvitationNotification(friendslist[k]._id,notificationMessage)
                                                         console.log('fbids in friendslist is '+friendslist[k]._id);
                                                             db.userSchema.find({"_id":friendslist[k]._id},{Credits : 1}).exec(function(err,docs){
                                                               if(err)console.log(err);
@@ -1391,6 +1525,12 @@ client.on('setBidInformation',function(data){
                                                                                            {
                                                                                             if(updated)
                                                                                             {
+                                                                                              // send remove player notification starts
+                                                                                              var nMessage = "userName has removed playerName from his team.";
+                                                                                              // sendPlayerAllotNotification(nMessage,data.playerId,data.FBID);
+                                                                                              sendPlayerAllotNotificationToLeagueMembers(nMessage,playerId,match_Id,pmem.FBID)
+                                                                                              // send remove player notification ends
+
                                                                                              client.emit('getCredits',{credits : acredits});
 
                                                                                             var b = {"FBID":data.FBID,"amount":parseInt(data.player_price)} ;
@@ -1518,6 +1658,8 @@ client.on('setBidInformation',function(data){
                                                                    client.emit('AskFriendCreditsFail',"Friends Invitation added fail");
                                                                   console.log('AskFriendCreditssuccess Credits Failed  ');
                                                                 }
+                                                                var notificationMessage = "senderName has given you 100 credits.";
+                                                                askForCreditsNotification(data.FriendFBID,data.FBID,notificationMessage)
                                                         }
                                                   });
                                             }
@@ -1724,4 +1866,204 @@ client.on('getchatInfo',function(data){
 redis.on("error", function (err) {
 console.log("Error " + err);
 });
+
+
+// Notifications
+
+function getUserName(user_id,callback){
+  db.userSchema.findOne({_id:FBID},{FBNAME:1,_id:0},function(err1,userName){
+    if(err1){
+      console.log("error in getting user name in getUSerNAme " + err1)
+    }else{
+      if(userName){
+        callback(userName)
+      }
+    }
+  })
+}
+function getPlayerName(playerId,callback){
+  db.player_profiles.findOne({playerId:playerId},{playerName:1,_id:0},function(err,playerName){
+    if(err){
+      console.log("error in getting player profile in getPlayerName function" + err)
+    }else{
+      if(playerName){
+        callback(playerName)
+      }
+    }
+  })
+}
+/*function sendPlayerAllotNotification(notificationMessage,playerId,FBID){
+  getPlayerName(playerId,function(playerName){
+    notificationMessage = notificationMessage.replace("playerName",playerName)
+    getUserName(FBID,function(userName){
+      notificationMessage = notificationMessage.replace("userName",userName)
+      sendNotification(notificationMessage,FBID)
+    })
+  })
+}*/
+function sendPlayerAsignNotification(notificationMessage,playerId,matchId,FBID){
+  getMatchTeamNames(matchId,function(matchName){
+    notificationMessage = notificationMessage.replace("matchName",matchName)
+    getUserName(sender,function(senderName){
+      notificationMessage = notificationMessage.replace("playerName",playerName)
+      sendNotification(notificationMessage,receiver)
+    })
+  })
+}
+
+function sendPlayerAllotNotificationToLeagueMembers(notificationMessage,playerId,matchId,FBID){
+
+  getPlayerName(playerId,function(playerName){
+    notificationMessage = notificationMessage.replace("playerName",playerName)
+    getUserName(FBID,function(userName){
+      notificationMessage = notificationMessage.replace("userName",userName)
+      db.Leagues_Info.find({matchId:matchId,users:FBID,leagueName:{$ne:{$regex:"piblicLEague"}}},function(err,leagues){
+        if(err){
+          console.log("error in getting leagues getFriendLeagueStatus " + err)
+        }else{
+          if(leagues){
+            var i=0,n=leagues.length;
+            function leagueLoop(i){
+              var j=0,m = league[i].users.length;
+              function userLoop(j){
+                if(FBID == league[i].users[j]){
+                  j++;
+                  if(j != m)
+                    userLoop(j)
+                  if(j == m){
+                    i++;
+                    if(i != n)
+                      leagueLoop(i)
+                  }
+                }else{
+                  sendNotification(notificationMessage,league[i].users[j])
+                  j++;
+                  if(j != m)
+                    userLoop(j)
+                  if(j == m){
+                    i++;
+                    if(i != n)
+                      leagueLoop(i)
+                  }
+                }
+              }
+              userLoop(j)
+            }
+            leagueLoop(i)
+          }
+        }
+      })
+      
+    })
+  })
+}
+function sendNotification(notificationMessage,userId){
+  var notification = {};
+  notification.user = userId;
+  notification.message = notificationMessage;
+  notification.createDate = new Date();
+  console.log(notification)
+  var notifications = new db.Notifications(notification);
+  notifications.save(function(err,recs){
+    if(err){
+      console.log("error in saving notification " + err)
+    }else{
+      console.log("save notification ")
+    }
+  })
+}
+
+function sendLeagueJoinNotification(sender,receiver,matchId,notificationMessage){
+  // sender == me ,  receiver == friend   ==> invitation
+  // sender == friend ,  receiver == me   ==> accept
+  // invitation to league notificationMessage = "senderName has invited to join in his league for the matchName match"
+  // joined in league notificationMessage = "senderName has joined your league for the matchName match."
+  getMatchTeamNames(matchId,function(matchName){
+    notificationMessage = notificationMessage.replace("matchName",matchName)
+    getUserName(sender,function(senderName){
+      notificationMessage = notificationMessage.replace("senderName",senderName)
+      sendNotification(notificationMessage,receiver)
+    })
+  })
+  
+}
+
+function getMatchTeamNames(matchId,callback){
+  db.Match_Shedule.findOne({matchId:matchId},{StartDate:1,"team1.teamName":1,"team2.teamName":1,matchId:1},function(err1,matches){
+    if(err1){
+      console.log("error in getting matches getMatchTeamNames" + err1)
+    }else{
+      if(matches){
+        callback(matches.team1.teamName + " v " + matches.team2.teamName)
+      }
+    } 
+  })
+}
+
+function sendLeaveLeagueNotification(userId,matchId){
+  // send notification message to all his frineds when user leave the League
+  getMatchTeamNames(matchId,function(matchName){
+    var matchName = matchName;
+    notificationMessage = notificationMessage.replace("matchName",matchName)
+    getUserName(userId,function(userName){
+      var userName = userName;
+      getFriends(userId,function(friendsList){
+        var i=0,n = frinedsList.length;
+        function frinedsLoop(i){
+          var friendId = frinedsList[i];
+          getFriendLeagueStatus(frinedId,matchId,function(isHaveLeague){
+            if(isHaveLeague){
+              notificationMessage = userName + " is not in any league right now. Invite him to join yours for the " + matchName + " match."
+            }else{
+              notificationMessage = userName + " is not in any league right now. Create a league with him for the " + matchName + " match."
+            }
+            sendNotification(notificationMessage,frinedId)
+            i++;
+            if(i != n)
+              frinedsLoop(i)
+          })
+        }
+        frinedsLoop(i);
+      })
+    });
+  })
+}
+function getFriends(userId,callback){
+  db.userSchema.findOne({_id:userId},{FriendsList:1,_id:0},function(err,friendsList){
+    if(err){
+      console.log("error in getting userdata getFriends " + err)
+    }else{
+      if(frinedsList.length){
+        callback(frinedsList)
+      }
+    }
+  })
+}
+function getFriendLeagueStatus(frinedId,matchId,callback){
+  db.Leagues_Info.find({matchId:matchId,users:friendId,leagueName:{$ne:{$regex:"piblicLEague"}}},function(err,league){
+    if(err){
+      console.log("error in getting leagues getFriendLeagueStatus " + err)
+    }else{
+      if(league){
+        callback(1)
+      }else{
+        callback(0)
+      }
+    }
+  })
+}
+
+function askForCreditsNotification(sender,receiver,notificationMessage){
+  // ask friends sender = me, receiver = frined
+  // grant to friend sender = friend, receiver = me
+  getUserName(sender,function(senderName){
+    notificationMessage = notificationMessage.replace("senderName",senderName)
+    sendNotification(notificationMessage,receiver)
+  })
+}
+
+function acceptAppInvitationNotification(userId,notificationMessage){
+  sendNotification(notificationMessage,userId)
+}
+
 
