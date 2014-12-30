@@ -282,7 +282,8 @@ function getmatchNew(callback){
                      mtype : docs[i].mtype,
                      series_id : docs[i].series_id,
                      series_name : docs[i].series_name,
-                     MatchNo : docs[i].MatchNo,                                             
+                     MatchNo : docs[i].MatchNo,   
+                    StartDate : docs[i].StartDate,
                      EndDate : docs[i].EndDate,
                      team1Info : team1Info,
                      team2Info : team2Info
@@ -333,7 +334,8 @@ function getmatchNew(callback){
                    mtype : docs[i].mtype,
                    series_id : docs[i].series_id,
                    series_name : docs[i].series_name,
-                   MatchNo : docs[i].MatchNo,                                             
+                   MatchNo : docs[i].MatchNo,
+                  StartDate : docs[i].StartDate,
                    EndDate : docs[i].EndDate,
                    team1Info : team1Info,
                    team2Info : team2Info
