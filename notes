@@ -4,3 +4,6 @@ logInWithFacebook  --> insert/update user loggedin user details
 		getMatchShortNames --> all team names and shortNames
 		getMatchSchedule  --> match shedule
 		getCredits  --> user credits
+
+getTeamInformation  --> send squad information 
+		getPlayerInfo --> send team wise player information (player stats) along with bid info to that user

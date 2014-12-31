@@ -260,13 +260,14 @@ function getmatchNew(callback){
       if(docs){
         console.log(" get match new ---------------------------------------------------------")
         var i=0,n=docs.length;
-        console.log("docs length is === " + docs.length)
+        // console.log("docs length is === " + docs.length)
         function matchesLoop(i){
           var day = docs[i].StartDate.getDate();
               var month = docs[i].StartDate.getMonth()+1;
               var year = docs[i].StartDate.getFullYear();
               var date = year+'-'+month+'-'+day; 
-              console.log(date + "-------------------")
+              date = new Date(date).toISOString()
+              // console.log(date + "-------------------")
           if(mainArray.length > 0){
             var j = 0,m=mainArray.length;
             function mainArrayLoop(j){ // loop main array and search for date if date found push match deatails else create new object with date 
@@ -274,11 +275,12 @@ function getmatchNew(callback){
               var month = docs[i].StartDate.getMonth()+1;
               var year = docs[i].StartDate.getFullYear();
               var date = year+'-'+month+'-'+day; 
+              date = new Date(date).toISOString()
               getTeamInfoNew(docs[i].team1.teamId,function(teamInfo){ // getting team1 info
                 var team1Info = teamInfo;
                 getTeamInfoNew(docs[i].team2.teamId,function(team2Info){ // getting team2 info
                   var matchInfo =  {
-                     match1Id : docs[i].matchId,
+                     matchId : docs[i].matchId,
                      mtype : docs[i].mtype,
                      series_id : docs[i].series_id,
                      series_name : docs[i].series_name,
@@ -296,9 +298,9 @@ function getmatchNew(callback){
                     if(i == n)
                       callback(mainArray)
                   }else{
-                    console.log("in else")
+                    // console.log("in else")
                     j++;
-                    console.log(j + " ==== " + m)
+                    // console.log(j + " ==== " + m)
                     if(j == m){
                       var dayMatch = {};
                       dayMatch.StartDate = date;
@@ -323,6 +325,7 @@ function getmatchNew(callback){
             var month = docs[i].StartDate.getMonth()+1;
             var year = docs[i].StartDate.getFullYear();
             var date = year+'-'+month+'-'+day; 
+            date = new Date(date).toISOString()
             var dayMatch = {};
             dayMatch.StartDate = date;
             dayMatch.matchInfo = [];
@@ -330,7 +333,7 @@ function getmatchNew(callback){
               var team1Info = teamInfo;
               getTeamInfoNew(docs[i].team2.teamId,function(team2Info){
                 var matchInfo =  {
-                   match1Id : docs[i].matchId,
+                   matchId : docs[i].matchId,
                    mtype : docs[i].mtype,
                    series_id : docs[i].series_id,
                    series_name : docs[i].series_name,
@@ -428,7 +431,7 @@ function getTeamInfoNew(teamId,callback){
                                   redis.get("curr_price"+matchId+"_"+players_list[i]+"",function(err,res){
                                   if(err) console.log(err);
                                   else{
-                                    j++;
+                                    // j++;
                                     var player_price = 0;
                                     if(res)
                                     {
@@ -490,15 +493,17 @@ function getTeamInfoNew(teamId,callback){
                                                  
                                                     
                                               player_info_object.push(playerjson);
+                                              j++;
+                                              if(j == n)
+                                              {
+                                                     maincallback(player_info_object)
+                                              }
+                                              //put this callback under else where we have to increase j++ value
                                              } 
                                              //end of ind player bid info aggregate else 
                                             })
                                             //end of ind player bid info aggregate query
-                                    if(j == n)
-                                       {
-                                             maincallback(player_info_object)
-                                      }
-                                      //put this callback under else where we have to increase j++ value
+                                    
                             
                                     }
                                      //end of player bid info avg aggregate else 
@@ -506,6 +511,14 @@ function getTeamInfoNew(teamId,callback){
                                 //end of player bid info avg aggregate 
                               }
                               //end of if(playerdoc)
+                              else{
+                                j++;
+                                console.log(j + " ==== " + n)
+                                if(j == n)
+                                {
+                                       maincallback(player_info_object)
+                                }
+                              }//end of else(playerdoc)
                             }
                             //end of playerdoc else Player_Info
                           })
@@ -1042,7 +1055,154 @@ function PlayerAssign(callsback){
 
 
 }
+function getTeamWisePlayersNew(matchId,team1,team2,FBID,mtype,maincallback){
+      var player_info_object = [];
+      db.matchplayers.aggregate([{ $unwind : "$teams" }, {$match : {"matchId" : parseInt(matchId) } },{ $project : {    matchid : "$matchId" , team : "$teams.teamId",  players : "$teams.players.playerId"} } ],function(err,docs){
+          console.log("matchplalyers == " + docs.length)
+          if(docs.length>0){
+                var players_list = [];
+                //console.log('player length '+docs.palyers.length);
 
+                for(var i = 0;i<docs.length;i++){
+                      for(var j=0;j<docs[i].players.length;j++){
+                        players_list.push(docs[i].players[j])
+                      }
+                }
+                var j=0;n=players_list.length;
+                for(var i=0;i<players_list.length;i++){
+                     (function(i){
+                        console.log("i value is " + i)
+          // execute random bid information
+         // db.Player_Bid_Info.update(
+         //                    {"matchId":matchId,"playerId":players_list[i]},
+         //                    {$addToSet:{bidInfo:{"FBID":parseInt(random(58487587854875,58487587854950)).toString(),"bidAmount":parseInt(random(50,200)),"deleted":0,"playerAdded":"no"}}},
+         //                    {upsert:true}, function (err,updated){
+         //                  if(err) console.log(err);
+         //                  else {
+         //                            console.log('Bid information is saved');
+         //                       }
+         //                     });
+
+                            db.player_profiles.findOne({playerId : players_list[i]},{playerId:1,country:1,firstName:1,lastName:1,fullname:1,teamId:1, image : 1, pic_url : 1, batting_info : 1, bowling_info : 1},function(err,playerDoc){
+                            if(err)console.log(err);
+                            else{
+                              if(playerDoc){
+                                // console.log(playerDoc)
+                                  redis.get("curr_price"+matchId+"_"+players_list[i]+"",function(err,res){
+                                  if(err) console.log(err);
+                                  else{
+                                    // j++;
+                                    // console.log(j + " === " + n)
+                                    var player_price = 0;
+                                    if(res)
+                                    {
+                                      player_price = res;
+                                      //console.log('player curr_price for matchid = '+matchId+' and player id = '+players_list[i]+' is '+player_price);
+                                    }
+                                   // console.log('fbid is '+FBID);
+
+
+                                      db.Player_Bid_Info.aggregate([{ $unwind : "$bidInfo" },{ $match :{ "matchId" : matchId,"playerId" :parseInt(players_list[i]),"bidInfo.FBID" : FBID}}]).exec(function(err, biddata){
+                                          if(err)console.log(err);
+                                              else{
+                                                
+                                                var indbid = 0,biddelete = 0,playeradded = 'no';
+                                               // console.log('biddata length '+biddata.length);
+                                                  if(biddata){
+                                                              for(var w = 0; w < biddata.length; w++)  
+                                                                                          { 
+                                                              var bid = JSON.stringify(biddata[w]);
+                                                              indbid = biddata[w].bidInfo.bidAmount;
+                                                              biddelete = biddata[w].bidInfo.deleted;
+                                                              playeradded = biddata[w].bidInfo.playerAdded;
+//console.log('bid amount inside '+indbid);
+                                                              }
+                                                     
+                                                        }
+                                                       // console.log('bid amount outside player id  '+indbid);
+                                                 var playerjson = {
+                                                      "matchId" : matchId,
+                                                      "playerId": playerDoc.playerId,
+                                                      "country" : playerDoc.country,
+                                                      "firstName" : playerDoc.firstName,
+                                                      "lastName" : playerDoc.lastName,
+                                                      "fullname" : playerDoc.fullname,
+                                                      "teamId" : playerDoc.teamId,
+                                                      "localimage" : playerDoc.image,
+                                                      "pic_url" : playerDoc.pic_url,
+                                                      "player_price" : player_price,
+                                                      "bid" : indbid,
+                                                      "deleted" : biddelete,
+                                                      "player_added" : playeradded
+                                                    };
+                                                      if(mtype==='t20')
+                                                      {
+                                                      playerjson.batting_info = playerDoc.batting_info.Twenty20;
+                                                      playerjson.bowling_info = playerDoc.bowling_info.Twenty20;
+
+                                                      }
+                                                      else if(mtype==='odi')
+                                                      {
+                                                      playerjson.batting_info = playerDoc.batting_info.ODIs;
+                                                      playerjson.bowling_info = playerDoc.bowling_info.ODIs;
+                                                      }
+                                                      else if(mtype==='test')
+                                                      {
+                                                      playerjson.batting_info = playerDoc.batting_info.Tests;
+                                                      playerjson.bowling_info = playerDoc.bowling_info.Tests;
+                                                      }
+                                                    
+                                                 
+                                                    
+                                              player_info_object.push(playerjson);
+                                              console.log(j + " === " + n)
+                                              j++;
+                                              if(j == n)
+                                              {
+                                                     maincallback(player_info_object)
+                                              }
+                                             } 
+                                             //end of ind player bid info aggregate else 
+                                            })
+                                            //end of ind player bid info aggregate query
+                                    
+                                      //put this callback under else where we have to increase j++ value
+                            
+                                    }
+                                     //end of player bid info avg aggregate else 
+                                  })
+                                //end of player bid info avg aggregate 
+                              }else{
+                                j++;
+                                console.log(j + " ==== " + n)
+                                if(j == n)
+                                {
+                                       maincallback(player_info_object)
+                                }
+                              }
+                              //end of if(playerdoc)
+                            }
+                            //end of playerdoc else Player_Info
+                          })
+                         //end of playerdoc Player_Info query
+        })(i)
+        // console.log(i + " ====== " + players_list[i])
+      }
+      //end of for loop player list
+
+      // console.log(docs)
+    }
+    else
+    {
+      player_info_object.push({players : "squad is not finalized"});
+      maincallback(player_info_object)
+
+    }
+    //end of if(doc) team_infos
+  })
+  //end of team_infos query
+}
+//end of getTeamWisePlayers function
 //PlayerAssign();
  //var cricapp = 'public';
 //chat using socket.io
@@ -1159,20 +1319,23 @@ io.sockets.on('connection', function(client){
                 var team1 = data.team1Id;
                 var team2 = data.team2Id;
                var matchId = data.matchId;
-       console.log('team1 at getTeamInformation '+data.team1Id);
-      console.log('matchId at getTeamInformation '+data.matchId);
-      console.log('team2 at getTeamInformation '+data.team2Id);
-      console.log('FBID at getTeamInformation '+data.FBID);
-      console.log('mtype at getTeamInformation '+data.mtype);
+       console.log('team1 at getTeamInformation ' + data.team1Id);
+      console.log('matchId at getTeamInformation ' + data.matchId);
+      console.log('team2 at getTeamInformation ' + data.team2Id);
+      console.log('FBID at getTeamInformation ' + data.FBID);
+      console.log('mtype at getTeamInformation ' + data.mtype);
                 console.log('getTeamInformation called');
-                 getTeamInfo(matchId,team1,team2,data.FBID,function(){  
+                 /*getTeamInfo(matchId,team1,team2,data.FBID,function(){  
                            client.emit('getTeamInfo',teaminfo);
                                               teaminfo = [];
-                                     });
+                                     });*/
+                 console.log("get teaminformation starts -------------------------------------------")
               getTeamWisePlayers(matchId,team1,team2,data.FBID,data.mtype,function(player_info_object){
+                console.log("in get teaminformation -------------------------------------------------")
                         client.emit('getPlayerInfo',player_info_object);
                 player_info_object = [];
               })
+              console.log("get teaminformation ends --------------------------------------------")
 
                db.Leagues_Info.aggregate([{ $unwind : "$users" },{ $match : { "matchId" : parseInt(data.matchId), "users" : data.FBID,"leagueType" : "private"  } }]).exec(function(err, leagueName){
                 if(err) console.log(err);
@@ -1259,6 +1422,12 @@ client.on('setBidInformation',function(data){
                                                      redis1(data.matchId,data.playerId,function(){
                                                       //console.log('playerstatusupdatearray is '+playerstatusupdatearray);
                                                       client.emit('playerstatusupdate',playerstatusupdatearray);
+                                                      //publish the player price info to all users
+                                                      pub.publish('public',JSON.stringify(playerstatusupdatearray),function(err,succ)
+                                                      {
+                                                        if(err)console.log(err);
+                                                        else {console.log(succ);}
+                                                      });
                                                       client.emit('userplayerstatusupdate',userplayerstatusupdatearray);
                                                       playerstatusupdatearray = [];
                                                       userplayerstatusupdatearray = [];
@@ -1612,125 +1781,107 @@ client.on('setBidInformation',function(data){
     });
 
 
-   client.on('AskFriendsAccept',function(data){
-              db.userSchema.find({"_id":data.FBID},{Credits : 1}).exec(function(err,docs){
+  client.on('AskFriendsAccept',function(data){
+    db.userSchema.find({"_id":data.FBID},{Credits : 1}).exec(function(err,docs){
+      if(err)console.log(err);
+      else{
+        if(docs){
+          console.log('credits docs '+docs);
+          for(var i = 0; i < docs.length; i++)  
+          { 
+            var Credits =  docs[i].Credits;
+            console.log('credits are '+docs[i].Credits);
+            var amount = 100;
+            db.userSchema.update({_id : docs[i]._id}, {$set : { Credits : (parseInt(Credits)+parseInt(amount)) } ,$addToSet:{CreditsInfo:{"credit":100,"debit":0,"All_Credits":(parseInt(Credits)+parseInt(amount)),"comment":"friend given "+data.FriendFBID+"","Created_Date":new Date()}}}).exec(function(err, data){
+              if(err)console.log(err);
+              else{
+                if(data){
+                 //client.emit('AskFriendCreditssuccess',"Friends Invitation added successfully");
+                }
+                else
+                {
+                  console.log('AskFriendCreditssuccess Credits Failed  ');
+                }           
+              }
+            });
+          }
+          db.userSchema.find({"_id":data.FriendFBID},{Credits : 1}).exec(function(err,docs){
+            if(err)console.log(err);
+            else{
+              if(docs){
+                console.log('credits docs '+docs);
+                for(var i = 0; i < docs.length; i++)  
+                { 
+                  var Credits =  docs[i].Credits;
+                  console.log('credits are '+docs[i].Credits);
+                  var amount = 100;
+                  db.userSchema.update({_id : docs[i]._id}, {$set : { Credits : (parseInt(Credits)-parseInt(amount)) } ,$addToSet:{CreditsInfo:{"credit":0,"debit":100,"All_Credits":(parseInt(Credits)-parseInt(amount)),"comment":"friend taken "+data.FBID+"","Created_Date":new Date()}}}).exec(function(err, data){
                     if(err)console.log(err);
-                        else{
-                          if(docs){
-                            console.log('credits docs '+docs);
-                             for(var i = 0; i < docs.length; i++)  
-                                    { 
-                                      var Credits =  docs[i].Credits;
-                                      console.log('credits are '+docs[i].Credits);
-                                      var amount = 100;
-                                     
-                                       db.userSchema.update({_id : docs[i]._id}, {$set : { Credits : (parseInt(Credits)+parseInt(amount)) } ,$addToSet:{CreditsInfo:{"credit":100,"debit":0,"All_Credits":(parseInt(Credits)+parseInt(amount)),"comment":"friend given "+data.FriendFBID+"","Created_Date":new Date()}}}).exec(function(err, data){
-                                        if(err)console.log(err);
-                                            else{
-                                                if(data){
-                                                         //client.emit('AskFriendCreditssuccess',"Friends Invitation added successfully");
-                                                        }
-                                                        else
-                                                        {
-                                                          console.log('AskFriendCreditssuccess Credits Failed  ');
-                                                        }
-                                                }
-                                          });
-                                    }
-
-                            db.userSchema.find({"_id":data.FriendFBID},{Credits : 1}).exec(function(err,docs){
-                            if(err)console.log(err);
-                                else{
-                                  if(docs){
-                                    console.log('credits docs '+docs);
-                                     for(var i = 0; i < docs.length; i++)  
-                                            { 
-                                              var Credits =  docs[i].Credits;
-                                              console.log('credits are '+docs[i].Credits);
-                                              var amount = 100;
-                                             
-                                               db.userSchema.update({_id : docs[i]._id}, {$set : { Credits : (parseInt(Credits)-parseInt(amount)) } ,$addToSet:{CreditsInfo:{"credit":0,"debit":100,"All_Credits":(parseInt(Credits)-parseInt(amount)),"comment":"friend taken "+data.FBID+"","Created_Date":new Date()}}}).exec(function(err, data){
-                                                if(err)console.log(err);
-                                                    else{
-                                                        if(data){
-                                                                 client.emit('AskFriendCreditssuccess',"Friends Invitation added successfully");
-                                                                }
-                                                                else
-                                                                {
-                                                                   client.emit('AskFriendCreditsFail',"Friends Invitation added fail");
-                                                                  console.log('AskFriendCreditssuccess Credits Failed  ');
-                                                                }
-                                                                var notificationMessage = "senderName has given you 100 credits.";
-                                                                askForCreditsNotification(data.FriendFBID,data.FBID,notificationMessage)
-                                                        }
-                                                  });
-                                            }
-                                          
-                                  }          
-                                }
-                          });
-
-
-
-
-
-                          }          
-                        }
+                    else{
+                      if(data){
+                       client.emit('AskFriendCreditssuccess',"Friends Invitation added successfully");
+                      }
+                      else
+                      {
+                         client.emit('AskFriendCreditsFail',"Friends Invitation added fail");
+                        console.log('AskFriendCreditssuccess Credits Failed  ');
+                      }
+                      var notificationMessage = "senderName has given you 100 credits.";
+                      askForCreditsNotification(data.FriendFBID,data.FBID,notificationMessage)
+                    }
                   });
-
-
-    });
-
-
-   client.on('getUserPlayers',function(data){
-          getUserPlayers(data.matchId,data.FBID,function(){
-            var userplayers = {
-              "yesplayers" : userplayersarryes,
-              "noplayers" : userplayersarrno
+                }
+              }          
             }
-                client.emit('getUserPlayersInfo',userplayers);
-                userplayersarryes = [];
-                userplayersarrno = [];
-           });
-
+          });
+        }          
+      }
     });
-
-
-
-   client.on('createPrivateLeague',function(data){ 
+  });
+  client.on('getUserPlayers',function(data){
+    getUserPlayers(data.matchId,data.FBID,function(){
+      var userplayers = {
+        "yesplayers" : userplayersarryes,
+        "noplayers" : userplayersarrno
+      }
+      client.emit('getUserPlayersInfo',userplayers);
+      userplayersarryes = [];
+      userplayersarrno = [];
+    });
+  });
+  client.on('createPrivateLeague',function(data){ 
     console.log('createPrivateLeague is called' + data.FBID);
-             createPrivateLeague(data,function(){ 
-                  createPublicLeague(data,function(){ 
-                     client.emit('createPrivateLeagueSuccess',"create private league success");
-                    console.log("league added successfully"); 
-                        })
-               }) 
-       }) 
-
-
-   client.on('joinLeague',function(data){ 
-              joinLeague(data,function(){ 
-                     createPublicLeague(data,function(){
-                         client.emit('joinLeagueSuccess',"user joined successfully in the private league");
-                           console.log("league joined successfully");
-                         }) 
-               })
-       }) 
-
-
-   client.on("createPublicLeague",function(data){ 
-                createPublicLeague(data,function(){ 
-                     client.emit('createPublicLeagueSuccess',"create public league success");
-                  console.log("public league joined successfully");
-                   })
-        })
-
-
+    createPrivateLeague(data,function(){ 
+      createPublicLeague(data,function(){ 
+        client.emit('createPrivateLeagueSuccess',"create private league success");
+        console.log("league added successfully"); 
+      })
+    }) 
+  }) 
+  client.on('joinLeague',function(data){ 
+    joinLeague(data,function(){ 
+      createPublicLeague(data,function(){
+        client.emit('joinLeagueSuccess',"user joined successfully in the private league");
+        console.log("league joined successfully");
+      }) 
+    })
+  }) 
+  client.on("createPublicLeague",function(data){ 
+    createPublicLeague(data,function(){ 
+      client.emit('createPublicLeagueSuccess',"create public league success");
+      console.log("public league joined successfully");
+    })
+  })
   sub.on('message', function(channel,message){
-  //console.log('subscribe is called '+message);
-              client.emit('message1', message);
-              client.emit('privatechat',message);
-          })
+    //console.log('subscribe is called '+message);
+    if(channel == "public"){
+      client.emit('matchPlayersPrice', message);
+    }else{
+      client.emit('message1', message);
+      client.emit('privatechat',message);
+    }
+
+  })
 
 
    client.on("message1",function(data){ 

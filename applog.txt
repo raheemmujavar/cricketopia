@@ -1,0 +1,1273 @@
+info: socket.io started
+debug: setting request GET /socket.io/1/websocket/GEtNtpu6Z_kCd8QBvk9m
+debug: set heartbeat interval for client GEtNtpu6Z_kCd8QBvk9m
+debug: websocket writing 7:::1+0
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: set close timeout for client GEtNtpu6Z_kCd8QBvk9m
+debug: cleared close timeout for client GEtNtpu6Z_kCd8QBvk9m
+debug: cleared heartbeat interval for client GEtNtpu6Z_kCd8QBvk9m
+debug: discarding transport
+debug: client authorized
+info: handshake authorized mp2XKHJV9_ZJs9odvqjq
+debug: setting request GET /socket.io/1/websocket/mp2XKHJV9_ZJs9odvqjq
+debug: set heartbeat interval for client mp2XKHJV9_ZJs9odvqjq
+debug: client authorized for 
+debug: websocket writing 1::
+team1 at getTeamInformation 7
+matchId at getTeamInformation 189019
+team2 at getTeamInformation 9
+FBID at getTeamInformation 100000464234606
+mtype at getTeamInformation test
+getTeamInformation called
+get teaminformation starts -------------------------------------------
+get teaminformation ends --------------------------------------------
+debug: websocket writing 5:::{"name":"success","args":["updated an existing user schema"]}
+debug: client authorized
+info: handshake authorized oloM8h9hWXnLkrWpvqjr
+credits docs 
+debug: websocket writing 5:::{"name":"getMatchShortNames","args":[["Australia:AUS","Bangladesh:BAN","England:ENG","India:IND","New Zealand:NZ","Pakistan:PAK","South Africa:SA","Sri Lanka:SL","West Indies:WI","Zimbabwe:ZIM","Bermuda:BER","Canada:CAN","Ireland:IRE","Kenya:KEN","Netherlands:NED","Scotland:SCO","Hong Kong:HK","Namibia:NAM","United Arab Emirates:UAE","United States of America:USA","ICC World XI:WRL","East Africa:EA","Afghanistan:AFG"]]}
+credits docs { Credits: -1600, _id: '55055630597282490' }
+credits are -1600
+ get match new ---------------------------------------------------------
+credits docs { Credits: -1600, _id: '55055630597282490' }
+credits are -1600
+debug: websocket writing 5:::{"name":"AskFriendCreditssuccess","args":["Friends Invitation added successfully"]}
+{ user: undefined,
+  message: '{ FBNAME: \'raheem\' } has given you 100 credits.',
+  createDate: Wed Dec 31 2014 10:38:23 GMT+0530 (IST) }
+save notification 
+debug: websocket writing 5:::{"name":"getMatchSchedule","args":[[{"StartDate":"2015-01-01T18:30:00.000Z","matchInfo":[{"match1Id":189019,"mtype":"test","series_id":"12069","series_name":"West Indies in South Africa, 3 Test Series, 2014/15","MatchNo":"3rd Test","StartDate":"2015-01-02T08:30:00.000Z","EndDate":"2015-01-06T15:30:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-02T18:30:00.000Z","matchInfo":[{"match1Id":189312,"mtype":"test","series_id":"12092","series_name":"Sri Lanka in New Zealand Test Series, 2 Test Cricket Series, 2014","MatchNo":"2nd Test","StartDate":"2015-01-02T22:00:00.000Z","EndDate":"2015-01-07T05:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}}]},{"StartDate":"2015-01-08T18:30:00.000Z","matchInfo":[{"match1Id":189020,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"1st T20I","StartDate":"2015-01-09T16:00:00.000Z","EndDate":"2015-01-09T20:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-10T18:30:00.000Z","matchInfo":[{"match1Id":189313,"mtype":"odi","series_id":"12093","series_name":"Sri Lanka in New Zealand ODI Series, 7 ODI Cricket Series, 2015","MatchNo":"1st ODI","StartDate":"2015-01-10T22:00:00.000Z","EndDate":"2015-01-11T06:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}},{"match1Id":189021,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"2nd T20I","StartDate":"2015-01-11T13:00:00.000Z","EndDate":"2015-01-11T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-13T18:30:00.000Z","matchInfo":[{"match1Id":189022,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"3rd T20I","StartDate":"2015-01-14T13:00:00.000Z","EndDate":"2015-01-14T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]}]]}
+debug: websocket writing 5:::{"name":"getCredits","args":[{"credits":-1600}]}
+debug: setting request GET /socket.io/1/websocket/oloM8h9hWXnLkrWpvqjr
+debug: set heartbeat interval for client oloM8h9hWXnLkrWpvqjr
+debug: client authorized for 
+debug: websocket writing 1::
+debug: client authorized
+info: handshake authorized SRNVkiP9h8LDJpQcvqjs
+debug: setting request GET /socket.io/1/websocket/SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: client authorized for 
+debug: websocket writing 1::
+info: transport end (undefined)
+debug: set close timeout for client mp2XKHJV9_ZJs9odvqjq
+debug: cleared close timeout for client mp2XKHJV9_ZJs9odvqjq
+debug: cleared heartbeat interval for client mp2XKHJV9_ZJs9odvqjq
+---------------client disconnected with FBID = 55055630597282490 and name = raheem------------
+debug: discarding transport
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized 7cbuIFyZ2JMKnKuLvqjt
+debug: setting request GET /socket.io/1/websocket/7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: client authorized for 
+debug: websocket writing 1::
+team1 at getTeamInformation 7
+matchId at getTeamInformation 189019
+team2 at getTeamInformation 9
+FBID at getTeamInformation 100000464234606
+mtype at getTeamInformation test
+getTeamInformation called
+get teaminformation starts -------------------------------------------
+get teaminformation ends --------------------------------------------
+debug: websocket writing 5:::{"name":"success","args":["updated an existing user schema"]}
+credits docs 
+debug: websocket writing 5:::{"name":"getMatchShortNames","args":[["Australia:AUS","Bangladesh:BAN","England:ENG","India:IND","New Zealand:NZ","Pakistan:PAK","South Africa:SA","Sri Lanka:SL","West Indies:WI","Zimbabwe:ZIM","Bermuda:BER","Canada:CAN","Ireland:IRE","Kenya:KEN","Netherlands:NED","Scotland:SCO","Hong Kong:HK","Namibia:NAM","United Arab Emirates:UAE","United States of America:USA","ICC World XI:WRL","East Africa:EA","Afghanistan:AFG"]]}
+credits docs { Credits: -1700, _id: '55055630597282490' }
+credits are -1700
+ get match new ---------------------------------------------------------
+credits docs { Credits: -1700, _id: '55055630597282490' }
+credits are -1700
+debug: websocket writing 5:::{"name":"AskFriendCreditssuccess","args":["Friends Invitation added successfully"]}
+{ user: undefined,
+  message: '{ FBNAME: \'raheem\' } has given you 100 credits.',
+  createDate: Wed Dec 31 2014 10:38:27 GMT+0530 (IST) }
+save notification 
+debug: websocket writing 5:::{"name":"getMatchSchedule","args":[[{"StartDate":"2015-01-01T18:30:00.000Z","matchInfo":[{"match1Id":189019,"mtype":"test","series_id":"12069","series_name":"West Indies in South Africa, 3 Test Series, 2014/15","MatchNo":"3rd Test","StartDate":"2015-01-02T08:30:00.000Z","EndDate":"2015-01-06T15:30:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-02T18:30:00.000Z","matchInfo":[{"match1Id":189312,"mtype":"test","series_id":"12092","series_name":"Sri Lanka in New Zealand Test Series, 2 Test Cricket Series, 2014","MatchNo":"2nd Test","StartDate":"2015-01-02T22:00:00.000Z","EndDate":"2015-01-07T05:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}}]},{"StartDate":"2015-01-08T18:30:00.000Z","matchInfo":[{"match1Id":189020,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"1st T20I","StartDate":"2015-01-09T16:00:00.000Z","EndDate":"2015-01-09T20:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-10T18:30:00.000Z","matchInfo":[{"match1Id":189313,"mtype":"odi","series_id":"12093","series_name":"Sri Lanka in New Zealand ODI Series, 7 ODI Cricket Series, 2015","MatchNo":"1st ODI","StartDate":"2015-01-10T22:00:00.000Z","EndDate":"2015-01-11T06:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}},{"match1Id":189021,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"2nd T20I","StartDate":"2015-01-11T13:00:00.000Z","EndDate":"2015-01-11T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-13T18:30:00.000Z","matchInfo":[{"match1Id":189022,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"3rd T20I","StartDate":"2015-01-14T13:00:00.000Z","EndDate":"2015-01-14T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]}]]}
+debug: websocket writing 5:::{"name":"getCredits","args":[{"credits":-1700}]}
+debug: emitting heartbeat for client oloM8h9hWXnLkrWpvqjr
+debug: websocket writing 2::
+debug: set heartbeat timeout for client oloM8h9hWXnLkrWpvqjr
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client oloM8h9hWXnLkrWpvqjr
+debug: set heartbeat interval for client oloM8h9hWXnLkrWpvqjr
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+info: transport end (socket end)
+debug: set close timeout for client oloM8h9hWXnLkrWpvqjr
+debug: cleared close timeout for client oloM8h9hWXnLkrWpvqjr
+debug: cleared heartbeat interval for client oloM8h9hWXnLkrWpvqjr
+---------------client disconnected with FBID = 55055630597282490 and name = raheem------------
+debug: discarding transport
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: client authorized
+info: handshake authorized cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: setting request GET /socket.io/1/websocket/cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"success","args":["updated an existing user schema"]}
+debug: websocket writing 5:::{"name":"getMatchShortNames","args":[["Australia:AUS","Bangladesh:BAN","England:ENG","India:IND","New Zealand:NZ","Pakistan:PAK","South Africa:SA","Sri Lanka:SL","West Indies:WI","Zimbabwe:ZIM","Bermuda:BER","Canada:CAN","Ireland:IRE","Kenya:KEN","Netherlands:NED","Scotland:SCO","Hong Kong:HK","Namibia:NAM","United Arab Emirates:UAE","United States of America:USA","ICC World XI:WRL","East Africa:EA","Afghanistan:AFG"]]}
+credits docs { _id: '100000110341687', Credits: 500 }
+credits are 500
+ get match new ---------------------------------------------------------
+debug: websocket writing 5:::{"name":"getMatchSchedule","args":[[{"StartDate":"2015-01-01T18:30:00.000Z","matchInfo":[{"match1Id":189019,"mtype":"test","series_id":"12069","series_name":"West Indies in South Africa, 3 Test Series, 2014/15","MatchNo":"3rd Test","StartDate":"2015-01-02T08:30:00.000Z","EndDate":"2015-01-06T15:30:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-02T18:30:00.000Z","matchInfo":[{"match1Id":189312,"mtype":"test","series_id":"12092","series_name":"Sri Lanka in New Zealand Test Series, 2 Test Cricket Series, 2014","MatchNo":"2nd Test","StartDate":"2015-01-02T22:00:00.000Z","EndDate":"2015-01-07T05:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}}]},{"StartDate":"2015-01-08T18:30:00.000Z","matchInfo":[{"match1Id":189020,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"1st T20I","StartDate":"2015-01-09T16:00:00.000Z","EndDate":"2015-01-09T20:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-10T18:30:00.000Z","matchInfo":[{"match1Id":189313,"mtype":"odi","series_id":"12093","series_name":"Sri Lanka in New Zealand ODI Series, 7 ODI Cricket Series, 2015","MatchNo":"1st ODI","StartDate":"2015-01-10T22:00:00.000Z","EndDate":"2015-01-11T06:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}},{"match1Id":189021,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"2nd T20I","StartDate":"2015-01-11T13:00:00.000Z","EndDate":"2015-01-11T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-13T18:30:00.000Z","matchInfo":[{"match1Id":189022,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"3rd T20I","StartDate":"2015-01-14T13:00:00.000Z","EndDate":"2015-01-14T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]}]]}
+debug: websocket writing 5:::{"name":"getCredits","args":[{"credits":500}]}
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: emitting heartbeat for client SRNVkiP9h8LDJpQcvqjs
+debug: websocket writing 2::
+debug: set heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client SRNVkiP9h8LDJpQcvqjs
+debug: set heartbeat interval for client SRNVkiP9h8LDJpQcvqjs
+debug: emitting heartbeat for client 7cbuIFyZ2JMKnKuLvqjt
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 7cbuIFyZ2JMKnKuLvqjt
+debug: set heartbeat interval for client 7cbuIFyZ2JMKnKuLvqjt
+debug: emitting heartbeat for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 2::
+debug: set heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+info: socket.io started
+debug: setting request GET /socket.io/1/websocket/cQ0kNFvs3S1YmcHHvqju
+debug: set heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: websocket writing 7:::1+0
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: set close timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: cleared close timeout for client cQ0kNFvs3S1YmcHHvqju
+debug: cleared heartbeat interval for client cQ0kNFvs3S1YmcHHvqju
+debug: discarding transport
+debug: client authorized
+info: handshake authorized a1M-ssXBjHzSLsTvxJc1
+debug: setting request GET /socket.io/1/websocket/a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: client authorized for 
+debug: websocket writing 1::
+team1 at getTeamInformation 7
+matchId at getTeamInformation 189019
+team2 at getTeamInformation 9
+FBID at getTeamInformation 100000464234606
+mtype at getTeamInformation test
+getTeamInformation called
+get teaminformation starts -------------------------------------------
+get teaminformation ends --------------------------------------------
+debug: websocket writing 5:::{"name":"success","args":["updated an existing user schema"]}
+credits docs 
+debug: websocket writing 5:::{"name":"getMatchShortNames","args":[["Australia:AUS","Bangladesh:BAN","England:ENG","India:IND","New Zealand:NZ","Pakistan:PAK","South Africa:SA","Sri Lanka:SL","West Indies:WI","Zimbabwe:ZIM","Bermuda:BER","Canada:CAN","Ireland:IRE","Kenya:KEN","Netherlands:NED","Scotland:SCO","Hong Kong:HK","Namibia:NAM","United Arab Emirates:UAE","United States of America:USA","ICC World XI:WRL","East Africa:EA","Afghanistan:AFG"]]}
+credits docs { Credits: -1800, _id: '55055630597282490' }
+credits are -1800
+ get match new ---------------------------------------------------------
+credits docs { Credits: -1800, _id: '55055630597282490' }
+credits are -1800
+debug: websocket writing 5:::{"name":"AskFriendCreditssuccess","args":["Friends Invitation added successfully"]}
+{ user: undefined,
+  message: '{ FBNAME: \'raheem\' } has given you 100 credits.',
+  createDate: Wed Dec 31 2014 10:44:52 GMT+0530 (IST) }
+save notification 
+debug: websocket writing 5:::{"name":"getMatchSchedule","args":[[{"StartDate":"2015-01-01T18:30:00.000Z","matchInfo":[{"matchId":189019,"mtype":"test","series_id":"12069","series_name":"West Indies in South Africa, 3 Test Series, 2014/15","MatchNo":"3rd Test","StartDate":"2015-01-02T08:30:00.000Z","EndDate":"2015-01-06T15:30:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-02T18:30:00.000Z","matchInfo":[{"matchId":189312,"mtype":"test","series_id":"12092","series_name":"Sri Lanka in New Zealand Test Series, 2 Test Cricket Series, 2014","MatchNo":"2nd Test","StartDate":"2015-01-02T22:00:00.000Z","EndDate":"2015-01-07T05:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}}]},{"StartDate":"2015-01-08T18:30:00.000Z","matchInfo":[{"matchId":189020,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"1st T20I","StartDate":"2015-01-09T16:00:00.000Z","EndDate":"2015-01-09T20:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-10T18:30:00.000Z","matchInfo":[{"matchId":189313,"mtype":"odi","series_id":"12093","series_name":"Sri Lanka in New Zealand ODI Series, 7 ODI Cricket Series, 2015","MatchNo":"1st ODI","StartDate":"2015-01-10T22:00:00.000Z","EndDate":"2015-01-11T06:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}},{"matchId":189021,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"2nd T20I","StartDate":"2015-01-11T13:00:00.000Z","EndDate":"2015-01-11T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-13T18:30:00.000Z","matchInfo":[{"matchId":189022,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"3rd T20I","StartDate":"2015-01-14T13:00:00.000Z","EndDate":"2015-01-14T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]}]]}
+debug: websocket writing 5:::{"name":"getCredits","args":[{"credits":-1800}]}
+debug: client authorized
+info: handshake authorized YUsMgHfWjjSqh7ykxJc2
+debug: setting request GET /socket.io/1/websocket/YUsMgHfWjjSqh7ykxJc2
+debug: set heartbeat interval for client YUsMgHfWjjSqh7ykxJc2
+debug: client authorized for 
+debug: websocket writing 1::
+info: transport end (socket end)
+debug: set close timeout for client YUsMgHfWjjSqh7ykxJc2
+debug: cleared close timeout for client YUsMgHfWjjSqh7ykxJc2
+debug: cleared heartbeat interval for client YUsMgHfWjjSqh7ykxJc2
+---------------client disconnected with FBID = 55055630597282490 and name = raheem------------
+debug: discarding transport
+debug: client authorized
+info: handshake authorized lB32mZFEZkD-ErdVxJc3
+debug: setting request GET /socket.io/1/websocket/lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"success","args":["updated an existing user schema"]}
+debug: websocket writing 5:::{"name":"getMatchShortNames","args":[["Australia:AUS","Bangladesh:BAN","England:ENG","India:IND","New Zealand:NZ","Pakistan:PAK","South Africa:SA","Sri Lanka:SL","West Indies:WI","Zimbabwe:ZIM","Bermuda:BER","Canada:CAN","Ireland:IRE","Kenya:KEN","Netherlands:NED","Scotland:SCO","Hong Kong:HK","Namibia:NAM","United Arab Emirates:UAE","United States of America:USA","ICC World XI:WRL","East Africa:EA","Afghanistan:AFG"]]}
+credits docs { _id: '100000464234606', Credits: 500 }
+credits are 500
+ get match new ---------------------------------------------------------
+debug: websocket writing 5:::{"name":"getMatchSchedule","args":[[{"StartDate":"2015-01-01T18:30:00.000Z","matchInfo":[{"matchId":189019,"mtype":"test","series_id":"12069","series_name":"West Indies in South Africa, 3 Test Series, 2014/15","MatchNo":"3rd Test","StartDate":"2015-01-02T08:30:00.000Z","EndDate":"2015-01-06T15:30:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-02T18:30:00.000Z","matchInfo":[{"matchId":189312,"mtype":"test","series_id":"12092","series_name":"Sri Lanka in New Zealand Test Series, 2 Test Cricket Series, 2014","MatchNo":"2nd Test","StartDate":"2015-01-02T22:00:00.000Z","EndDate":"2015-01-07T05:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}}]},{"StartDate":"2015-01-08T18:30:00.000Z","matchInfo":[{"matchId":189020,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"1st T20I","StartDate":"2015-01-09T16:00:00.000Z","EndDate":"2015-01-09T20:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-10T18:30:00.000Z","matchInfo":[{"matchId":189313,"mtype":"odi","series_id":"12093","series_name":"Sri Lanka in New Zealand ODI Series, 7 ODI Cricket Series, 2015","MatchNo":"1st ODI","StartDate":"2015-01-10T22:00:00.000Z","EndDate":"2015-01-11T06:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}},{"matchId":189021,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"2nd T20I","StartDate":"2015-01-11T13:00:00.000Z","EndDate":"2015-01-11T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-13T18:30:00.000Z","matchInfo":[{"matchId":189022,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"3rd T20I","StartDate":"2015-01-14T13:00:00.000Z","EndDate":"2015-01-14T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]}]]}
+debug: websocket writing 5:::{"name":"getCredits","args":[{"credits":500}]}
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+team1 at getTeamInformation 7
+matchId at getTeamInformation 189019
+team2 at getTeamInformation 9
+FBID at getTeamInformation 100000464234606
+mtype at getTeamInformation test
+getTeamInformation called
+get teaminformation starts -------------------------------------------
+get teaminformation ends --------------------------------------------
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: set heartbeat interval for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client lB32mZFEZkD-ErdVxJc3
+debug: websocket writing 2::
+debug: set heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: fired heartbeat timeout for client lB32mZFEZkD-ErdVxJc3
+info: transport end (heartbeat timeout)
+debug: set close timeout for client lB32mZFEZkD-ErdVxJc3
+debug: cleared close timeout for client lB32mZFEZkD-ErdVxJc3
+---------------client disconnected with FBID = 100000464234606 and name = Sudhakar Reddy------------
+debug: discarding transport
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: client authorized
+info: handshake authorized liQrgYmSezpem14TxJc4
+debug: setting request GET /socket.io/1/websocket/liQrgYmSezpem14TxJc4
+debug: set heartbeat interval for client liQrgYmSezpem14TxJc4
+debug: client authorized for 
+debug: websocket writing 1::
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client liQrgYmSezpem14TxJc4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: set heartbeat interval for client liQrgYmSezpem14TxJc4
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client liQrgYmSezpem14TxJc4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: set heartbeat interval for client liQrgYmSezpem14TxJc4
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client liQrgYmSezpem14TxJc4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: set heartbeat interval for client liQrgYmSezpem14TxJc4
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client liQrgYmSezpem14TxJc4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: set heartbeat interval for client liQrgYmSezpem14TxJc4
+debug: client authorized
+info: handshake authorized e2ybVlMmlqahgLQrxJc5
+debug: client authorized
+info: handshake authorized 5OOnf_sQgqYzkId8xJc6
+debug: setting request GET /socket.io/1/websocket/e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: client authorized for 
+debug: websocket writing 1::
+debug: setting request GET /socket.io/1/websocket/5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: client authorized for 
+debug: websocket writing 1::
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client liQrgYmSezpem14TxJc4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: set heartbeat interval for client liQrgYmSezpem14TxJc4
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client liQrgYmSezpem14TxJc4
+debug: websocket writing 2::
+debug: set heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client liQrgYmSezpem14TxJc4
+debug: set heartbeat interval for client liQrgYmSezpem14TxJc4
+info: transport end (socket end)
+debug: set close timeout for client liQrgYmSezpem14TxJc4
+debug: cleared close timeout for client liQrgYmSezpem14TxJc4
+debug: cleared heartbeat interval for client liQrgYmSezpem14TxJc4
+---------------client disconnected with FBID = 100000464234606 and name = Sudhakar Reddy------------
+debug: discarding transport
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+debug: emitting heartbeat for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 2::
+debug: set heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 2::
+debug: set heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: emitting heartbeat for client a1M-ssXBjHzSLsTvxJc1
+debug: websocket writing 2::
+debug: set heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client a1M-ssXBjHzSLsTvxJc1
+debug: set heartbeat interval for client a1M-ssXBjHzSLsTvxJc1
+info: socket.io started
+debug: client authorized
+info: handshake authorized AHXhIf8N6IAEozuC3koP
+debug: setting request GET /socket.io/1/websocket/AHXhIf8N6IAEozuC3koP
+debug: set heartbeat interval for client AHXhIf8N6IAEozuC3koP
+debug: client authorized for 
+debug: websocket writing 1::
+team1 at getTeamInformation 7
+matchId at getTeamInformation 189019
+team2 at getTeamInformation 9
+FBID at getTeamInformation 100000464234606
+mtype at getTeamInformation test
+getTeamInformation called
+get teaminformation starts -------------------------------------------
+get teaminformation ends --------------------------------------------
+debug: websocket writing 5:::{"name":"success","args":["updated an existing user schema"]}
+credits docs 
+debug: websocket writing 5:::{"name":"getMatchShortNames","args":[["Australia:AUS","Bangladesh:BAN","England:ENG","India:IND","New Zealand:NZ","Pakistan:PAK","South Africa:SA","Sri Lanka:SL","West Indies:WI","Zimbabwe:ZIM","Bermuda:BER","Canada:CAN","Ireland:IRE","Kenya:KEN","Netherlands:NED","Scotland:SCO","Hong Kong:HK","Namibia:NAM","United Arab Emirates:UAE","United States of America:USA","ICC World XI:WRL","East Africa:EA","Afghanistan:AFG"]]}
+credits docs { Credits: -1900, _id: '55055630597282490' }
+credits are -1900
+ get match new ---------------------------------------------------------
+credits docs { Credits: -1900, _id: '55055630597282490' }
+credits are -1900
+debug: websocket writing 5:::{"name":"AskFriendCreditssuccess","args":["Friends Invitation added successfully"]}
+{ user: undefined,
+  message: '{ FBNAME: \'raheem\' } has given you 100 credits.',
+  createDate: Wed Dec 31 2014 11:12:56 GMT+0530 (IST) }
+save notification 
+debug: websocket writing 5:::{"name":"getMatchSchedule","args":[[{"StartDate":"2015-01-01T18:30:00.000Z","matchInfo":[{"matchId":189019,"mtype":"test","series_id":"12069","series_name":"West Indies in South Africa, 3 Test Series, 2014/15","MatchNo":"3rd Test","StartDate":"2015-01-02T08:30:00.000Z","EndDate":"2015-01-06T15:30:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-02T18:30:00.000Z","matchInfo":[{"matchId":189312,"mtype":"test","series_id":"12092","series_name":"Sri Lanka in New Zealand Test Series, 2 Test Cricket Series, 2014","MatchNo":"2nd Test","StartDate":"2015-01-02T22:00:00.000Z","EndDate":"2015-01-07T05:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}}]},{"StartDate":"2015-01-08T18:30:00.000Z","matchInfo":[{"matchId":189020,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"1st T20I","StartDate":"2015-01-09T16:00:00.000Z","EndDate":"2015-01-09T20:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-10T18:30:00.000Z","matchInfo":[{"matchId":189313,"mtype":"odi","series_id":"12093","series_name":"Sri Lanka in New Zealand ODI Series, 7 ODI Cricket Series, 2015","MatchNo":"1st ODI","StartDate":"2015-01-10T22:00:00.000Z","EndDate":"2015-01-11T06:00:00.000Z","team1Info":{"teamId":5,"teamName":"New Zealand","teamShortName":"NZ","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand-26-2-2013-e83c496a930a420848b561c210dbbaf4.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_small-26-2-2013-f3b6a4b8899eb627854a956677ea2c53.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag-1-2-2011-47faa19586061974b01c99058628d32e.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/new_zealand_flag_small-1-2-2011-648a3001043e4d94a5eebd9dfe9a88a5.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5-11-2-2012-36848dfcad81aae16dfc28cc1c506618.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_s-11-2-2012-a3e1d867528e59013ea81407d1fdfe02.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/5_l-11-2-2012-78e43d8e16ee76e5f28da1a679de2eff.png","__v":0},"team2Info":{"teamId":8,"teamName":"Sri Lanka","teamShortName":"SL","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka-26-2-2013-de0108e194085662137677a04fc4d093.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_small-26-2-2013-da0378709cab16d862dd11348d5f8a09.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag-1-2-2011-9c66eb3e952d7fcda9b20d42145ef18c.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/sri_lanka_flag_small-1-2-2011-4239d880b394fcc423a14234d1fafaac.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8-11-2-2012-09cb390bd958ae05890f56d2b1d9a39a.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_s-11-2-2012-8d06a8566e73875152c057e7a0993b45.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/8_l-11-2-2012-42596125ceefa9b3960e6231785d0ab6.png","__v":0}},{"matchId":189021,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"2nd T20I","StartDate":"2015-01-11T13:00:00.000Z","EndDate":"2015-01-11T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]},{"StartDate":"2015-01-13T18:30:00.000Z","matchInfo":[{"matchId":189022,"mtype":"t20","series_id":"12070","series_name":"West Indies in South Africa T20 Series, 3 T20 Cricket Series, 2015","MatchNo":"3rd T20I","StartDate":"2015-01-14T13:00:00.000Z","EndDate":"2015-01-14T17:00:00.000Z","team1Info":{"teamId":7,"teamName":"South Africa","teamShortName":"SA","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa-26-2-2013-0dd53b4c3d9d2d62fdf47e690a892b92.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_small-1-2-2011-53d3554a638cc4b114764c154ea164bd.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag-1-2-2011-d42076e888a05412fdfdf7504c4c6649.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/south_africa_flag_small-1-2-2011-52e6632a8c28d6b73e7e583692b58f16.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7-11-2-2012-4541e123431f83ef71ca72c9ba36a989.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_s-11-2-2012-d7641c072634340445b36f19996601ba.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/7_l-11-2-2012-6ffcebebcba7787554927c94de0b3109.png","__v":0},"team2Info":{"teamId":9,"teamName":"West Indies","teamShortName":"WI","teamLogoPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies-26-2-2013-d3ee3026b84398864c10e4320494c6e8.jpg","teamLogoSmallPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_small-26-2-2013-d0e88ec3179f31a2c0ebc05e1830453e.jpg","teamFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag-1-2-2011-1f60ba1dc32a680e11ae5efe99bcc924.gif","teamSmallFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/west_indies_flag_small-1-2-2011-7f81c93235b1ea332d460c28778e21a4.gif","teamRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9-11-2-2012-c51c1d9604f42152a6e87e5cb38542e3.png","teamSmallRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_s-11-2-2012-b317c02e8201f9cbbefd3d21381bb534.png","teamLargeRoundFlagPath":"https://s.yimg.com/qx/cricket/fufp/images/9_l-11-2-2012-da7e8c6fe82f0fa6ec7ee4d3051d3ba6.png","__v":0}}]}]]}
+debug: websocket writing 5:::{"name":"getCredits","args":[{"credits":-1900}]}
+debug: setting request GET /socket.io/1/websocket/e2ybVlMmlqahgLQrxJc5
+debug: set heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: websocket writing 7:::1+0
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: set close timeout for client e2ybVlMmlqahgLQrxJc5
+debug: cleared close timeout for client e2ybVlMmlqahgLQrxJc5
+debug: cleared heartbeat interval for client e2ybVlMmlqahgLQrxJc5
+debug: discarding transport
+debug: setting request GET /socket.io/1/websocket/5OOnf_sQgqYzkId8xJc6
+debug: set heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: websocket writing 7:::1+0
+warn: client not handshaken client should reconnect
+info: transport end (error)
+debug: set close timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: cleared close timeout for client 5OOnf_sQgqYzkId8xJc6
+debug: cleared heartbeat interval for client 5OOnf_sQgqYzkId8xJc6
+debug: discarding transport
