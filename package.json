@@ -9,6 +9,7 @@
     "forever": "^0.13.0",
     "mongoose": "^3.8.19",
     "redis": "~0.8.4",
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "leaderboard": "0.0.9"
   }
 }

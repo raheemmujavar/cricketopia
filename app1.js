@@ -8,7 +8,7 @@ var http = require('http')
   , socketIO = require("socket.io")
   , path = require('path');
 var _redis = require('redis'),
-//54.169.3.18
+
 
  redis = _redis.createClient(6379,redisip);
  //to run code synchronously 
@@ -17,7 +17,7 @@ var Leaderboard = require('leaderboard');
 //initialize our application
 var app = express();
 app.use(express.static(path.join(__dirname, 'assets')));
-var server = http.createServer(app).listen(3001);
+var server = http.createServer(app).listen(3002);
 var io = socketIO.listen(server);
 var stdev = require( 'compute-stdev' );
 var sub = _redis.createClient(6379,redisip);
@@ -62,7 +62,7 @@ for ( var i = 0; i < data.length; i++ ) {
               }          
             }
       });
-      getmatchNew(FBID,function(mainArray){
+      getmatchNew(function(mainArray){
         /*for(var i=0;i<mainArray.length;i++){
           console.log(mainArray[i])
         }*/
@@ -253,7 +253,7 @@ function getmatch(){
 
 }
 //getmatch()
-function getmatchNew(userId,callback){
+function getmatchNew(callback){
   var mainArray = [];
   var tempDate,match= [],match1=[];
   db.match_shedules.find({EndDate : {$gt :new Date()} }).sort({StartDate : 1}).limit(6).exec(function(err,docs){
@@ -282,48 +282,44 @@ function getmatchNew(userId,callback){
                 var team1Info = teamInfo;
                 getTeamInfoNew(docs[i].team2.teamId,function(team2Info){ // getting team2 info
                   isSquadAnnounced(docs[i].matchId,function(isAnnounced){
-                    isMatchFollowed(docs[i].matchId,userId,function(isFollowed){
-                      var matchInfo =  {
-                        matchId : docs[i].matchId,
-                        mtype : docs[i].mtype,
-                        series_id : docs[i].series_id,
-                        series_name : docs[i].series_name,
-                        MatchNo : docs[i].MatchNo,   
-                        StartDate : docs[i].StartDate,
-                        EndDate : docs[i].EndDate,
-                        team1Info : team1Info,
-                        team2Info : team2Info,
-                        squadAnnounced: isAnnounced,
-                        isFollowed: isFollowed
-                       };
-                      if(mainArray[j].StartDate == date){
-                        mainArray[j].matchInfo.push(matchInfo);
+                    var matchInfo =  {
+                       matchId : docs[i].matchId,
+                       mtype : docs[i].mtype,
+                       series_id : docs[i].series_id,
+                       series_name : docs[i].series_name,
+                       MatchNo : docs[i].MatchNo,   
+                      StartDate : docs[i].StartDate,
+                       EndDate : docs[i].EndDate,
+                       team1Info : team1Info,
+                       team2Info : team2Info,
+                       squadAnnounced: isAnnounced
+                     };
+                    if(mainArray[j].StartDate == date){
+                      mainArray[j].matchInfo.push(matchInfo);
+                      i++;
+                      if(i != n)
+                        matchesLoop(i)
+                      if(i == n)
+                        callback(mainArray)
+                    }else{
+                      // console.log("in else")
+                      j++;
+                      // console.log(j + " ==== " + m)
+                      if(j == m){
+                        var dayMatch = {};
+                        dayMatch.StartDate = date;
+                        dayMatch.matchInfo = [];
+                        dayMatch.matchInfo.push(matchInfo);
+                        mainArray.push(dayMatch);
                         i++;
                         if(i != n)
                           matchesLoop(i)
                         if(i == n)
                           callback(mainArray)
-                      }else{
-                        // console.log("in else")
-                        j++;
-                        // console.log(j + " ==== " + m)
-                        if(j == m){
-                          var dayMatch = {};
-                          dayMatch.StartDate = date;
-                          dayMatch.matchInfo = [];
-                          dayMatch.matchInfo.push(matchInfo);
-                          mainArray.push(dayMatch);
-                          i++;
-                          if(i != n)
-                            matchesLoop(i)
-                          if(i == n)
-                            callback(mainArray)
-                        }
-                        if(j != m)
-                          mainArrayLoop(j);
                       }
-                    })
-                    
+                      if(j != m)
+                        mainArrayLoop(j);
+                    }
                   })
                   
                 })// end of getting team2 info without player info
@@ -343,31 +339,29 @@ function getmatchNew(userId,callback){
               var team1Info = teamInfo;
               getTeamInfoNew(docs[i].team2.teamId,function(team2Info){
                 isSquadAnnounced(docs[i].matchId,function(isAnnounced){
-                  isMatchFollowed(docs[i].matchId,userId,function(isFollowed){
-                    var matchInfo =  {
-                      matchId : docs[i].matchId,
-                      mtype : docs[i].mtype,
-                      series_id : docs[i].series_id,
-                      series_name : docs[i].series_name,
-                      MatchNo : docs[i].MatchNo,
-                      StartDate : docs[i].StartDate,
-                      EndDate : docs[i].EndDate,
-                      team1Info : team1Info,
-                      team2Info : team2Info,
-                      squadAnnounced: isAnnounced,
-                      isFollowed: isFollowed
-                     };
-                     dayMatch.matchInfo.push(matchInfo);
-                      mainArray.push(dayMatch);
-                      i++;
-                      if(i != n)
-                        matchesLoop(i)
-                      if(i == n){
-                        callback(mainArray)
-                        console.log("march new ends -------------------------------------------------------------")
-                      }
-                  })
+                  var matchInfo =  {
+                   matchId : docs[i].matchId,
+                   mtype : docs[i].mtype,
+                   series_id : docs[i].series_id,
+                   series_name : docs[i].series_name,
+                   MatchNo : docs[i].MatchNo,
+                  StartDate : docs[i].StartDate,
+                   EndDate : docs[i].EndDate,
+                   team1Info : team1Info,
+                   team2Info : team2Info,
+                   squadAnnounced: isAnnounced
+                 };
+                 dayMatch.matchInfo.push(matchInfo);
+                  mainArray.push(dayMatch);
+                  i++;
+                  if(i != n)
+                    matchesLoop(i)
+                  if(i == n){
+                    callback(mainArray)
+                    console.log("march new ends -------------------------------------------------------------")
+                  }
                 })
+                
               })
             })
           }
@@ -2628,7 +2622,6 @@ function getLeaderBoardMembers(members,leaderboardObj,callback){
           leaderboardObj.rank(userId,function(err,rank){
             console.log("rank of " + userId +" is " + rank);
           // userData.userPic = userDoc.FBPIC; 
-            rank = parseInt(rank)+1;
             userData.userId = userId; 
             userData.userName = userDoc.FBNAME; 
             userData.rank = rank; 
@@ -2744,23 +2737,6 @@ function getMyMatchesList(userId,callback){
       }
       else{
         callback([])
-      }
-    }
-  })
-}
-function isMatchFollowed(matchId,userId,callback){
-  db.MatchFollowers.find({matchId:matchId,users:{$elemMatch:{userId:userId,isFollowed:"Yes"}}},{matchId:1,_id:0},function(err1,matchesList){
-    if(err1){
-      console.log("error in getting follow matches " + err1)
-    }else{
-      if(matchesList){
-        if(matchesList.length > 0)
-          callback("Yes")
-        else
-          callback("No")
-      }
-      else{
-        callback("No")
       }
     }
   })

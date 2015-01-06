@@ -47,18 +47,18 @@
           //google_id = 'mujavar@gmail.com';
        FBID = '1505563059728251';
          
-        /*socket.emit('logInWithFacebook',
+        socket.emit('logInWithFacebook',
           {
-                    "FBID" : "55055630597282490",
+                    "FBID" : "1505563059728249",
                     "FBNAME" : "raheem",
                     "FBPIC":"dd",
                     "FBCITY":"hyderabad",
                     "FBCOUNTRY":"india",
                     "deviceToken":"1",
                     "EMAIL" : "raheem@gmail.com" 
-            });*/
+            });
 
-        socket.emit('getTeamInformation',
+        /*socket.emit('getTeamInformation',
           {
                     "team1Id" : "7",
                     "team2Id" : "9",
@@ -66,7 +66,21 @@
                     "FBID" : "100000464234606",
                     "mtype" : "test"
 
-            });
+            });*/
+          /*socket.emit('getLeagueLeaderBoard',
+          {
+                    "leagueId" : "",
+                    "matchId" : "189019",
+                    "FBID" : "100000464234606"
+
+            });*/
+          socket.emit('followMatch',{"matchId":"189020","userId":"1505563059728249"});
+          // socket.emit('getMyMatches',{"userId":"1505563059728249"});
+          // socket.emit('unFollowMatch',{"matchId":"189018","userId":"1505563059728249"});
+          // socket.emit('getLeaderBoard',{"page":"","userId":"100000110341687"});
+          // socket.emit('getLeaderBoard',{"page":"1","userId":"1505563059728249"});
+          // socket.emit('getFriendsLeaderBoard',{"page":"","userId":"1505563059728249"});
+          // socket.emit('getLocationLeaderBoard',{"page":"","userId":"1505563059728249"});
       //   socket.emit('getPlayerInformation',{"playerId":10181});
 
       //  socket.emit('getPlayerCurrentPrice',{"playerId":4035,"matchId":"189337"});

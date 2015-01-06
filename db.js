@@ -19,7 +19,8 @@ var userSchema = new Schema({
         EMAIL : String,
         Credits : Number,
         FriendsList : Array,
-        CreditsInfo : Array
+        CreditsInfo : Array,
+        fantasyPoints : Array
 });
  var userSchemacol = "userSchema"
 exports.userSchema = mongoose.model( 'userSchema', userSchema, userSchemacol );
@@ -122,7 +123,11 @@ exports.Notifications = mongoose.model( 'Notifications',{
          "message" : String,
          "createDate" : Date,
 },"Notifications");
-
+exports.MatchFollowers = mongoose.model( 'MatchFollowers',{
+         "matchId": String,
+         "users" : Array,
+         "createDate" : Date,
+},"MatchFollowers");
 
 
 
